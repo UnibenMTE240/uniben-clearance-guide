@@ -22,9 +22,20 @@ menuButton.addEventListener("click", function () {
         menuButton.setAttribute("aria-expanded", "false");
     });
 }
-    
-const dyna = document.querySelector("#dynaCont");
-//const info = document.querySelector(".info");
+    // CLEARANCE
+const onClButton = document.getElementById("onCl");
+const phyClButton = document.getElementById("phyCl");
+
+if (onClButton && phyClButton) {
+    onClButton.addEventListener("click", () => {
+        window.location.href="#";
+    });
+    phyClButton.addEventListener("click", () => {
+        window.location.href="#";
+    });
+}
+
+/*const dyna = document.querySelector("#dynaCont");
 if (dyna) {
     setTimeout(() =>{
         dyna.innerHTML = `
@@ -33,8 +44,11 @@ if (dyna) {
                 <p><b>DURATION</b>: ≈ 5 months</p>
              <p><b>DESCRIPTION</b>: This website is designed to support 100-level students of the University of Benin by providing clear, accessible guidance and resources related to the clearance process.</p>
             <p><b>DEVELOPER</b>: UNIBEN MTE240</p>
-      </div>
+       </div>
+        <div class="cell">
+        <a href="index2.html">preview homepage<a>
+        </div>
         `;
-    }, 5000);
+    }, 2000);
 }
-
+*/
