@@ -5,15 +5,18 @@ body {
   width: 100vw;
 }
 header {
- 
   position: fixed;
   top: 0;
+  z-index: 100;
   width: 100%;
   background-color: #fff;
 }
 main {
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
+
+
+/* MENU MENU MENU */
 #mnBut {
   border: solid transparent;
   margin: 2px;
@@ -27,6 +30,75 @@ main {
   background: white;
   height: 100vh;
 }
+/* FOR LARGE AND MEDIUM SCREENS */
+/* FOR LARGE AND MEDIUM SCREENS */
+.lgScrMunuCont {
+  position: relative;
+  white-space: nowrap;
+  border: 1px solid plum;
+  height: 45px;
+  background: rgba(15, 52, 212, 0.05);
+}
+
+.lgScrMenu {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 100%;
+  align-items: center;
+}
+.lgScrMenu li {
+  padding: 20px 10px
+}
+.lgScrMenu li a {
+  color: darkslateblue;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 7px;
+}
+.lgScrMenu li a:hover {
+  color: black;
+  font-weight: 800;
+  border: 1px solid plum;
+  border-radius: 25px;
+}
+
+
+
+/* CLASS */
+.clSec {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 30px;
+}
+#onCl {
+  background-image: url("https://unibenmte240.github.io/MTE240/asset/logo/onCl.webp");
+}
+#phyCl {
+  background-image: url("https://unibenmte240.github.io/MTE240/asset/logo/phyCl.jpeg");
+}
+.clSec h1, .clSec h2 {
+  color: plum;
+  font-weight: 700;
+  font-size: 1.8rem
+}
+.clSec i {
+  font-size: 5.2rem;
+  color: lightpink
+}
+.clSec i:hover {
+  color: plum;
+  transform: scale(1.1);
+  transition: transform 1.1s ease
+}
+
 
 /* PRE DEVELOPMENT STYLING */
 /* PRE DEVELOPMENT STYLING */
