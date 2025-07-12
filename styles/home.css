@@ -13,6 +13,7 @@
   top: 65px;
   width: 100vw;
   background-color: var(--backgroundColorII);
+  z-index: 10;
 }
 .guideTitle {
   color: #00795f;
