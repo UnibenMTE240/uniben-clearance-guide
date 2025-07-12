@@ -1,0 +1,89 @@
+/* How to Accept Admission on JAMB CAPS */
+/* How to Accept Admission on JAMB CAPS */
+
+.guide-section {
+  max-width: 850px;
+  background-color: var(--backgroundColorII);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+}
+.guideTitleCell {
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 65px;
+  width: 100vw;
+  background-color: var(--backgroundColorII);
+}
+.guideTitle {
+  color: #00795f;
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: var(--fontIII);
+  font-optical-sizing: auto;
+}
+
+
+.step {
+  margin-bottom: 2rem;
+}
+.stepImg {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  
+}
+.stepImg img {
+  object-fit: cover;
+  height: 350px;
+  width: 280px
+}
+.step h4 {
+  color: #0a0a0a;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: darkslateblue;
+  font-family: var(--fontII);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.step p {
+  margin: 0;
+}
+.important {
+  background-color: #fff4e5;
+  padding: 1rem;
+  border-left: 5px solid #ffae42;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.button.custom {
+  background-color: #00795f;
+  border-radius: 8px;
+  color: white;
+}
+.guide-section .fas {
+  color: darkslateblue;
+  font-size: 1.6rem
+}
+#warnIc {
+  color: maroon
+}
+
+@media (min-width: 480px) {
+  .guideTitleCell {
+    top: 87px;
+  }
+  .guideTitle {
+    font-size: 2.3rem;
+  }
+  .stepImg img {
+    object-fit: cover;
+    height: 250px;
+    width: 200px
+  }
+}
+
+
+

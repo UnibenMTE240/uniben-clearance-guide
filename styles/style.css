@@ -1,8 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+
+/*
+
+.exo-2-<uniquifier> {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+:root {
+  --colorI: #000;
+  --backgroundColorI: rgba(186, 85, 211, 0.07);
+  --backgroundColorII: #ffffff;
+  --fontI: "Signika", open-sans;
+  --fontII: "Texturina", serif;
+  --fontIII: "Exo 2", sans-serif;
+}
+
 html {
   font-size: 16px;
 }
 body {
   width: 100vw;
+  background-color: var(--backgroundColorI);
 }
 header {
   position: fixed;
@@ -12,9 +34,26 @@ header {
   background-color: #fff;
 }
 main {
-  margin-top: 10rem;
+  margin-top: 9rem;
 }
-
+p {
+  font-family: var(--fontI);
+  font-variation-settings:
+      "GARD" 0;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+a:hover {
+  text-decoration: underline;
+}
+.siteNm {
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-family: var(--fontII);
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: indigo;
+}
 
 /* MENU MENU MENU */
 #mnBut {
@@ -25,11 +64,41 @@ main {
 }
 #mnClBut {
   padding: 5px 20px;
+  margin-top: 10%;
 }
 #me_nu {
   background: white;
   height: 100vh;
 }
+.mnImg {
+  width: 10vw;
+  margin-bottom: 60px;
+  object-fit: cover;
+}
+#me_nu img {
+  height: 50px;
+  margin-left: 10px;
+}
+#me_nu span {
+  font-size: 
+}
+#me_nu li {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 0 25px;
+}
+#me_nu li a {
+  padding: 6px;
+  width: 5px;
+  color: #000;
+}
+#me_nu ul {
+  width: 85%;
+}
+
+
+
 /* FOR LARGE AND MEDIUM SCREENS */
 /* FOR LARGE AND MEDIUM SCREENS */
 .lgScrMunuCont {
@@ -77,6 +146,8 @@ main {
   background-blend-mode: multiply;
   background-color: rgba(0,0,0,0.6);
   border-radius: 30px;
+  display: flex;
+  flex-direction: column
 }
 #onCl {
   background-image: url("https://unibenmte240.github.io/MTE240/asset/logo/onCl.webp");
@@ -98,6 +169,10 @@ main {
   transform: scale(1.1);
   transition: transform 1.1s ease
 }
+.clSec span {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
 
 
 /* PRE DEVELOPMENT STYLING */
@@ -114,3 +189,15 @@ main {
 .ftEnd a:hover {
   text-decoration: underline
 }
+
+@media (min-width: 480px) {
+  main {
+    margin-top: 10rem;
+  }
+  .siteNm {
+    font-size: 2rem;
+  }
+}
+
+
+
