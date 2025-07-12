@@ -18,10 +18,14 @@
 </head>
 <body>
     
-            <div class="grid-container show-for-small-only" id="me_nu" data-reveal data-animation-in="slide-in-left" data-animation-out="slide-out-left">
-         		<h2>MENU</h2>
-                
-                <ul class="no-bullet">
+          <div class="grid-container show-for-small-only align-center-middle" id="me_nu" data-reveal data-animation-in="slide-in-left" data-animation-out="slide-out-left">              
+              <div class="grid-x grid-margin-x">                 
+                                    
+              	<button class="close-button" id="mnClBut" data-close aria-label="close menu">
+        							<i class="fas fa-close" style="color: #4B0082; font-size: 2.1rem"></i>
+    								</button>
+                                  
+             <ul class="no-bullet">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#guide">Guide</a></li>
                 <li><a href="#downloads">Online Clearance</a></li>
@@ -30,23 +34,23 @@
                 <li><a href="#updates">Updates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-    								
-    											<button class="close-button" id="mnClBut" data-close aria-label="close menu">
-        							<i class="fas fa-close" style="color: #4B0082; font-size: 2.1rem"></i>
-    								</button>
+                  
+              </div>   										
 								</div>
 
     <!-- HEADER -->
     <!-- FOR SMALL SCREENS ONLY -->
     <header class="grid-container">
         <div class="grid-x">
+            <!--
             <div class="cell small-2 medium-1 large-1" onclick=window.location.href="index.html">
                 <img src="asset/logo/lg.png" alt="Logo" class="responsive-img">
             </div>
-            <div class="cell small-8 medium-9 large-8 align-center-middle" onclick=window.location.href="index.html">
-                <h2>MTE PROJECT</h2>
+            -->
+            <div class="cell small-10 medium-9 large-8 align-center-middle" onclick=window.location.href="index.html">
+                <span class="siteNm">UNIBEN CLEARANCE GUIDE</span>
             </div>
-            <div class="cell small-1 medium-2 large-2 align-center-middle show-for-small-only">
+            <div class="cell small-2 medium-2 large-2 align-center-middle show-for-small-only">
                 <button class="button hollow menuBut" id="mnBut" data-open="me_nu" aria-label="menu" aria-expanded="false">
                     <i class="fas fa-align-right"></i>
                     </button>
@@ -112,7 +116,7 @@
         <div class="large-12 columns">
             <h3>Accept Your Admission on JAMB CAPS</h3>
             <p><strong>Before proceeding with your clearance, you must first accept your provisional admission on JAMB CAPS. Once you've accepted, you can continue with the rest of the clearance steps.</strong></p>
-            <a href="https://www.jamb.gov.ng/Efacility" class="button alert" target="_blank">Learn How to Accept Admission</a>
+            <a href="how-to-accept-admission.html" class="button alert" target="_blank">Learn How to Accept Admission</a>
         </div>
     </div>
 </section>                                                            
@@ -122,17 +126,17 @@
     <div class="grid-x grid-margin-x grid-padding-x small-up-1 medium-up-2 large-up-2 align-center-middle">
         
         <div class="cell">
-        <div class="align-center-middle text-center clSec" id="onCl">
+        <button class="align-center-middle text-center clSec" id="onCl">
             <i class="fas fa-laptop"></i> 
-            <h1>ONLINE CLEARANCE</h1>
-        </div>
+            <span>ONLINE CLEARANCE</span>
+        </button>
         </div>
         
         <div class="cell">
-        <div class="align-center-middle text-center clSec" id="phyCl">
+        <button class="align-center-middle text-center clSec" id="phyCl">
             <i class="fas fa-university"></i>
-            <h2>PHYSICAL CLEARANCE</h2>
-        </div>
+            <span>PHYSICAL CLEARANCE</span>
+        </button>
         </div>
                                 
                     </div>
@@ -177,6 +181,12 @@
   });
 });
     
+   
+    document.querySelectorAll(".lgScrMenu li").forEach(button => {
+                button.addEventListener("click", () => {
+                    button.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }); // Scroll the clicked button into view smoothly                                                
+            });
+        })
     </script>
 
     </body>
