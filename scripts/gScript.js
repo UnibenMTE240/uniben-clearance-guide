@@ -35,6 +35,65 @@ if (onClButton && phyClButton) {
     });
 }
 
+const docTitle = document.getElementById("docTtl");
+const pageTitle = document.getElementById("docLgNm");
+
+if (docTitle) {
+    window.addEventListener('scroll', changeName)
+    
+    function changeName() {
+        const rect = docTitle.getBoundingClientRect();
+        if (rect.top < 43 && pageTitle.textContent != "DOCUMENT UPLOAD GUIDE") {
+            pageTitle.style.color = "#00795f";
+            pageTitle.textContent = "DOCUMENT UPLOAD GUIDE";
+            pageTitle.classList.add("fadeMove");
+        } else if (rect.top > 55 && pageTitle.textContent != "UNIBEN CLEARANCE GUIDE") {
+            pageTitle.style.color = "indigo";
+            pageTitle.textContent = "UNIBEN CLEARANCE GUIDE";
+            pageTitle.classList.add("fadeMoveI");
+        }
+    }
+}
+if (pageTitle) {
+    pageTitle.addEventListener('animationend', () => {
+        pageTitle.classList.remove("fadeMove");
+        pageTitle.classList.remove("fadeMoveI");
+    })
+}
+
+const links = document.querySelectorAll(".guide-section a");
+
+if (links) {
+    links.forEach(item => {
+        const href = item.getAttribute("href");
+
+        // Only continue if href starts with '#' and is not just '#'
+        if (href && href.startsWith("#") && href.length > 1) {
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            });
+        }
+    });
+}
+
+const checklist = document.querySelectorAll(".checklist a");
+if (checklist) {
+    checklist.forEach(item => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = item.getAttribute("href"); 
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+}
+
 /*const dyna = document.querySelector("#dynaCont");
 if (dyna) {
     setTimeout(() =>{
