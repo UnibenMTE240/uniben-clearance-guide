@@ -31,7 +31,7 @@ header {
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: #fff;
+  background-color: rgb(255, 243, 255);
 }
 main {
   margin-top: 9rem;
@@ -53,6 +53,33 @@ a:hover {
   font-optical-sizing: auto;
   font-style: normal;
   color: indigo;
+  display: block;
+}
+.fadeMove {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeMoveI {
+  animation: fadeOut 0.5s ease-in-out;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* MENU MENU MENU */
@@ -99,8 +126,8 @@ a:hover {
 
 
 
-/* FOR LARGE AND MEDIUM SCREENS */
-/* FOR LARGE AND MEDIUM SCREENS */
+/* MENU FOR LARGE AND MEDIUM SCREENS */
+/* MENU FOR LARGE AND MEDIUM SCREENS */
 .lgScrMunuCont {
   position: relative;
   white-space: nowrap;
@@ -135,7 +162,7 @@ a:hover {
 
 
 
-/* CLASS */
+/* CLASS 
 .clSec {
   background-size: cover;
   background-repeat: no-repeat;
@@ -173,6 +200,19 @@ a:hover {
     font-size: 1.8rem;
     font-weight: 700;
 }
+*/
+
+/* ACESSING KOFA*/
+
+  .guide-section .step p, .guide-section ul {
+    margin-bottom: 1.5rem;
+  }
+
+
+/*UPLOADING OF DOCUMENTS 
+
+
+
 
 
 /* PRE DEVELOPMENT STYLING */

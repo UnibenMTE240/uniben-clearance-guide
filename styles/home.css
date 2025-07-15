@@ -1,11 +1,20 @@
 /* How to Accept Admission on JAMB CAPS */
 /* How to Accept Admission on JAMB CAPS */
 
-.guide-section {
+.guide-section { 
   background-color: var(--backgroundColorII);
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+.guide-section a {
+  color: blueviolet
+}
+.guide-section:nth-child(even) {
+  background-color: rgb(255, 243, 255);
+  box-shadow: 0 0 2px #555;
+  border-left: 4px solid rgba(125, 0, 125, 0.5);
 }
 .guideTitleCell {
   margin-bottom: 1rem;
@@ -38,8 +47,7 @@
   height: 350px;
   width: 280px
 }
-.step h4 {
-  color: #0a0a0a;
+.step h4, .docH {
   margin-bottom: 0.5rem;
   font-weight: 700;
   color: darkslateblue;
@@ -71,6 +79,64 @@
   color: maroon
 }
 
+/*DOCUMENT GUIDE */
+/* DOCUMENT GUIDE */
+/*DOCUMENT GUIDE */
+/* DOCUMENT GUIDE */
+ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+ul.checklist li {
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}
+ul.checklist a {
+  color: darkgreen
+}
+.warning-list li {
+  margin-bottom: 0.5rem;
+}
+.preview {
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.docNm {
+  position: sticky;
+  z-index: 10; 
+  top: 65px;
+  padding: 0.5rem;
+  background-color: var(--backgroundColorII);
+}
+.guide-section:nth-child(even) .docNm {
+  background-color: rgb(255, 243, 255);
+}
+
+
+.accordion-title {
+  font-size: 1rem;
+  font-family: var(--fontIII);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+  color: indigo;
+}
+.accordion-title:hover {
+  color: darkcyan;
+  background-color: var(--backgroundColorI);
+}
+.accordion-content {
+  font-family: var(--fontI);
+  font-variation-settings:
+      "GARD" 0;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
 @media (min-width: 480px) {
   .guideTitleCell {
     top: 87px;
@@ -83,6 +149,18 @@
     height: 250px;
     width: 200px
   }
+  .docNm {
+    top: 80px;
+  }
+}
+.mustDoIc .fas, .acceptedIc{
+  color: darkgreen !important;
+}
+.mistakesIc {
+  color: RGB(250, 161, 0) !important;
+}
+.warning-list .fas {
+  color: maroon;
 }
 
 
