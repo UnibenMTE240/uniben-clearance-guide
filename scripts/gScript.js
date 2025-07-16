@@ -35,17 +35,19 @@ if (onClButton && phyClButton) {
     });
 }
 
-const docTitle = document.getElementById("docTtl");
-const pageTitle = document.getElementById("docLgNm");
+const docTitle = document.querySelector(".docTtl");
+const pageTitle = document.querySelector(".docLgNm");
+const pgTitle = document.querySelector(".pgTitle");
 
-if (docTitle) {
+if (docTitle && pgTitle) {
+    const pgTitles = pgTitle.textContent;
     window.addEventListener('scroll', changeName)
     
     function changeName() {
         const rect = docTitle.getBoundingClientRect();
-        if (rect.top < 43 && pageTitle.textContent != "DOCUMENT UPLOAD GUIDE") {
+        if (rect.top < 43 && pageTitle.textContent != pgTitles.toUpperCase()) {
             pageTitle.style.color = "#00795f";
-            pageTitle.textContent = "DOCUMENT UPLOAD GUIDE";
+            pageTitle.textContent = pgTitles.toUpperCase();
             pageTitle.classList.add("fadeMove");
         } else if (rect.top > 55 && pageTitle.textContent != "UNIBEN CLEARANCE GUIDE") {
             pageTitle.style.color = "indigo";
@@ -92,6 +94,27 @@ if (checklist) {
             }
         });
     });
+}
+
+
+
+  // Scroll to Top Button Toggle
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+if (scrollToTopBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
+
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 }
 
 /*const dyna = document.querySelector("#dynaCont");
