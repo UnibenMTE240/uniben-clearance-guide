@@ -63,7 +63,7 @@ if (pageTitle) {
     })
 }
 
-const links = document.querySelectorAll(".guide-section a");
+const links = document.querySelectorAll("a");
 
 if (links) {
     links.forEach(item => {
@@ -75,7 +75,7 @@ if (links) {
                 e.preventDefault();
                 const targetSection = document.querySelector(href);
                 if (targetSection) {
-                    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+                    targetSection.scrollIntoView({ behavior: "smooth", block: "center" });
                 }
             });
         }
