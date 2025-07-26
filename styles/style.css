@@ -161,6 +161,52 @@ a:hover {
 }
 
 
+/* Hero Section */
+.hero {
+  background: linear-gradient(
+    to right,
+    rgb(206, 85, 211),
+    rgba(186, 85, 211, 0.5)
+  );
+  color: #fff;
+  padding: 4rem 1rem;
+}
+
+.hero-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+  font-family: var(--fontIII);
+}
+
+.hero-lead {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: navy;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+.hero-buttons .button {
+  margin: 0 0.5rem;
+}
+
+/* First Step Section */
+.first-step {
+  padding: 2.5rem 1rem;
+}
+
+.first-step h3 {
+  font-size: 1.8rem;
+}
+
+.first-step p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 1rem auto;
+}
 
 /* CLASS 
 .clSec {
