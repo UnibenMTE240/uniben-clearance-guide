@@ -1,6 +1,11 @@
 /* How to Accept Admission on JAMB CAPS */
 /* How to Accept Admission on JAMB CAPS */
 
+.clTyps .callout {
+  background-color: rgba(186, 85, 211, 0.1);
+  border-radius: 0.8rem;
+}
+
 .guide-section { 
   background-color: var(--backgroundColorII);
   padding: 1rem;
@@ -68,10 +73,13 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.button.custom {
-  background-color: #00795f;
+.button.custom, .clTyps .button, #online-clearance .button {
+  background-color: rgba(0, 168, 107, 0.3);
+  border-radius: 2rem !important;
+  border: 2px solid green;
   border-radius: 8px;
-  color: white;
+  color: black;
+  font-weight: 600;
 }
 .guide-section .fas {
   color: darkslateblue;

@@ -1,0 +1,88 @@
+/* Toggle Button Styling */
+.dark-toggle-btn {
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  z-index: 9999; 
+  background-color: #ba55d3;
+  color: #000;
+  border: 2px solid green;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+}
+
+.dark-toggle-btn:hover {
+  background-color: #a247bc;
+}
+
+/* Dark Mode Base Class */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+.dark-mode header {
+  background-color: #121212;
+}
+.dark-mode .siteNm, .dark-mode #mnBut {
+  color: plum;
+}
+
+
+
+.dark-mode .guide-section {
+  background-color: black
+}
+.dark-mode p {
+  color: whitesmoke
+}
+.dark-mode a {
+  color: #d6a6f2;
+}
+
+/* Component Overrides */
+.dark-mode .callout,
+.dark-mode .footer,
+.dark-mode .faq-toggle {
+  background-color: #1f1f1f !important;
+  color: #f0f0f0 !important;
+}
+.dark-mode .button.custom,
+.dark-mode .clTyps .button, 
+.dark-mode #online-clearance .button {
+  color: white
+}
+
+.dark-mode .button.secondary {
+  background-color: #333 !important;
+}
+
+.dark-mode .button.alert {
+    color: #fff;
+}
+.dark-mode .step h4, .dark-mode .docH,
+.dark-mode .guide-section h2, 
+.dark-mode #faqH2,
+.dark-mode .guide-section .fas {
+  color: plum;
+}
+
+.dark-mode li {
+  color: #fff
+}
+
+.dark-mode .accordion-title, 
+.dark-mode .accordion-content {
+  background-color: black;
+  color: plum;
+  border-color: #666;
+}
+.dark-mode .accordion-title:hover {
+  background-color: #121212;
+  color: cyan
+}
+

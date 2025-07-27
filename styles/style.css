@@ -17,6 +17,7 @@
   --fontI: "Signika", open-sans;
   --fontII: "Texturina", serif;
   --fontIII: "Exo 2", sans-serif;
+  --buttonColor: linear-gradient(222deg, rgb(105, 10, 225), rgb(150, 106, 255), rgb(105, 20, 255), rgb(50, 8, 255), rgb(105, 20, 223), rgb(61, 8, 255));
 }
 
 html {
@@ -26,6 +27,7 @@ body {
   width: 100vw;
   background-color: var(--backgroundColorI);
 }
+
 header {
   position: fixed;
   top: 0;
@@ -162,27 +164,30 @@ a:hover {
 
 
 /* Hero Section */
-.hero {
-  background: linear-gradient(
-    to right,
-    rgb(206, 85, 211),
-    rgba(186, 85, 211, 0.5)
-  );
+.hero-section-with-image {
+  background: rgba(0, 0, 0, 0.5) url('https://unibenmte240.github.io/MTE240/asset/logo/bgI.jpeg') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 1rem;
   color: #fff;
-  padding: 4rem 1rem;
+  position: relative;
+  text-align: center;
+  background-blend-mode: multiply;
 }
 
 .hero-heading {
   font-size: 2.5rem;
   font-weight: 700;
-  color: black;
+  color: rebeccapurple;
+  -webkit-text-stroke: 1px white;
   font-family: var(--fontIII);
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .hero-lead {
   font-size: 1.3rem;
   margin-top: 1rem;
-  color: navy;
+  color: aliceblue;
 }
 
 .hero-buttons {
@@ -192,6 +197,11 @@ a:hover {
 .hero-buttons .button {
   margin: 0 0.5rem;
 }
+#startGd {
+  background: var(--buttonColor);
+  border-radius: 2rem
+}
+
 
 /* First Step Section */
 .first-step {
@@ -207,6 +217,19 @@ a:hover {
   max-width: 700px;
   margin: 1rem auto;
 }
+
+
+.guide-section h2, #faqH2 {
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        color: darkslateblue;
+        font-family: var(--fontII);
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .imgSteps {
+        margin-bottom: 0.5rem;
+    }
 
 /* CLASS 
 .clSec {
