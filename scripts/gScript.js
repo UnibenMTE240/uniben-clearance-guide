@@ -5,23 +5,35 @@ bckToHm.addEventListener('click', () => {
     window.location.href="index.html";
 });
 }
+
 // FOR MENU
+const menu = document.querySelector(".small-screen-menu");
 const menuButton = document.getElementById("mnBut");
 const menuClButton = document.getElementById("mnClBut");
 if (menuButton) {
 menuButton.addEventListener("click", function () {
     const expanded = menuButton.getAttribute("aria-expanded") === "true";
-    
+   
     if (!expanded) {
         menuButton.setAttribute("aria-expanded", "true");
+        menu.classList.remove("removeMenu");
+        menu.classList.add("showMenu");
+        menu.style.display = "flex";
     } else {
         menuButton.setAttribute("aria-expanded", "false");
     }
 });
     menuClButton.addEventListener("click", function () {
         menuButton.setAttribute("aria-expanded", "false");
+        menu.classList.add("removeMenu");
+        setTimeout( () => {
+            menu.style.display = "none";
+        }, 1000);
     });
 }
+
+
+
     // CLEARANCE
 const onClButton = document.getElementById("onCl");
 const phyClButton = document.getElementById("phyCl");
