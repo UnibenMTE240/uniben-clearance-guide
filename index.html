@@ -38,30 +38,8 @@
 </head>
  
 <body>
-    
-          <div class="grid-container show-for-small-only align-center-middle" id="me_nu" data-reveal data-animation-in="slide-in-left" data-animation-out="slide-out-left">              
-              <div class="grid-x grid-margin-x">                 
-                                    
-              	<button class="close-button" id="mnClBut" data-close aria-label="close menu">
-        							<i class="fas fa-close" style="color: #4B0082; font-size: 2.1rem"></i>
-    								</button>
-                                  
-             <ul class="no-bullet">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Document Guide</a></li>
-                <li><a href="#downloads">Online Clearance</a></li>
-                 <li><a href="#downloads">Physical Clearance</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#updates">Updates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-                                 
-                  
-              </div>   										
-								</div>
-
+  
     <!-- HEADER -->
-    <!-- FOR SMALL SCREENS ONLY -->
     <header class="grid-container">
         <div class="grid-x">
             <!--
@@ -73,11 +51,12 @@
                 <span class="siteNm">UNIBEN CLEARANCE GUIDE</span>
             </div>
             <div class="cell small-2 medium-2 large-2 align-center-middle show-for-small-only">
-                <button class="button hollow menuBut" id="mnBut" data-open="me_nu" aria-label="menu" aria-expanded="false">
-                    <i class="fas fa-align-right"></i>
+                <button class="button hollow menuBut" id="mnBut" aria-label="menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
+    </header>
         
         
 <!-- FOR MEDIUM AND LARGE SCREENS -->
@@ -120,14 +99,33 @@
     														</li>
         </ul>
 </div>        
-     </header>
-                       
+    
+              <!-- FOR SMALL SCREENS ONLY -->             
+    <div class="grid-container show-for-small-only small-screen-menu">
+            <div class="grid-x grid-margin-x">
+                <button class="closeMenuButton" id="mnClBut" aria-label="Close Menu"><i class="fas fa-close"></i></button>
+              <ul class="no-bullet">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Document Guide</a></li>
+                <li><a href="#downloads">Online Clearance</a></li>
+                <li><a href="#downloads">Physical Clearance</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#updates">Updates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>                       
+            </div>
+        </div>
+    
+    
+    
+    
+  
         <!-- MAIN -->
         <main class="grid-container cont"  id="dynaCont">          
                 <div class="grid-x grid-margin-x align-center-middle text-center">
 
-                     <button id="darkToggle" class="dark-toggle-btn">
-                     <i class="fas fa-moon"></i> Dark Mode
+                     <button id="darkToggle" class="dark-toggle-btn" aria-label="Switch to dark mode">
+                     <i class="fas fa-moon"></i>
                      </button
                 
   <!-- Hero Section -->
@@ -139,8 +137,8 @@
         A complete step-by-step guide to help you handle your 100-level clearance without confusion.
       </p>
       <div class="hero-buttons">
-        <a href="#guide" id="startGd" class="button large"><i class="fas fa-play-circle"></i> Start Guide</a>
-        <a href="#contact" class="button large success" style="border-radius: 2rem;"><i class="fab fa-whatsapp"></i> Join WhatsApp Group</a>
+        <a href="#guide" class="button large" aria-label="Start guide"><i class="fas fa-play-circle"></i> Start Guide</a>
+        <a href="#contact" class="button large success" aria-label="Join WhatsApp Group"><i class="fab fa-whatsapp"></i> Join WhatsApp Group</a>
       </div>
     </div>
   </div>
@@ -615,7 +613,7 @@
   </div>
 </section>
           
- <a href="https://wa.me/234XXXXXXXXXX" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp" onclick="alert('Oops! This page is still under development, Please contact MTE240 Devs if you think this is a broken link.')">
+ <a href="https://wa.me/234XXXXXXXXXX" class="whatsapp-float" target="_blank" aria-label="Join WhatsApp Group" onclick="alert('Oops! This page is still under development, Please contact MTE240 Devs if you think this is a broken link.')">
   <i class="fab fa-whatsapp"></i>
 </a>
 
