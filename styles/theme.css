@@ -1,15 +1,15 @@
 /* Toggle Button Styling */
 .dark-toggle-btn {
   position: fixed;
-  top: 4rem;
-  right: 1rem;
+  top: 4.5rem;
+  left: 1rem;
   z-index: 9999; 
-  background-color: #ba55d3;
-  color: #000;
+  background-color: transparent;
+  color: indigo;
   border: 2px solid green;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -17,9 +17,15 @@
 }
 
 .dark-toggle-btn:hover {
-  background-color: #a247bc;
+  background-color: rgba(186, 85, 211, 0.4);
+  color: black
 }
-
+.dark-mode .dark-toggle-btn {
+  color: plum;
+}
+.dark-mode .dark-toggle-btn:hover {
+  color: white
+}
 /* Dark Mode Base Class */
 .dark-mode {
   background-color: #121212;
