@@ -31,6 +31,9 @@
   background-color: var(--backgroundColorII);
   z-index: 10;
 }
+.dark-mode .guideTitleCell {
+  background-color: #000;
+}
 .guideTitle {
   color: #00795f;
   font-weight: 600;
@@ -104,6 +107,9 @@ ul.checklist li {
 ul.checklist a {
   color: darkgreen
 }
+.dark-mode ul.checklist a {
+  color: mediumaquamarine
+}
 .warning-list li {
   margin-bottom: 0.5rem;
 }
@@ -120,6 +126,9 @@ ul.checklist a {
   top: 65px;
   padding: 0.5rem;
   background-color: var(--backgroundColorII);
+}
+.dark-mode .docNm {
+  background-color: #000;
 }
 /*
 .guide-section:nth-child(even) .docNm {
@@ -146,7 +155,9 @@ ul.checklist a {
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+.dark-mode #docGuide-faq .accordion-content {
+  color: #fff
+}
 
 @media (min-width: 480px) {
   .guideTitleCell {

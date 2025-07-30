@@ -34,7 +34,9 @@
 .dark-mode header {
   background-color: #121212;
 }
-.dark-mode .siteNm, .dark-mode #mnBut {
+.dark-mode .siteNm, 
+.dark-mode #mnBut,
+.dark-mode .docLgNm {
   color: plum;
 }
 
@@ -76,6 +78,9 @@
 .dark-mode .guide-section .fas {
   color: plum;
 }
+.dark-mode .guideTitle {
+  color: limegreen;
+}
 
 .dark-mode li {
   color: #fff
@@ -92,3 +97,11 @@
   color: cyan
 }
 
+/* FAQ */
+.dark-mode #faqSearch {
+  background-color: #121212;
+  color: #fff;
+}
+.dark-mode #faq-section .accordion-title {
+  color: white
+}

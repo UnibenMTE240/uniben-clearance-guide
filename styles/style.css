@@ -9,6 +9,14 @@
   font-style: normal;
 }
 */
+.active-section {
+  color: red;
+  background-color: red
+}
+.active-link {
+  color: blue;
+  background-color: red
+}
 
 :root {
   --colorI: #000;
@@ -125,12 +133,10 @@ a:hover {
   color: plum;
 }
 .small-screen-menu li {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 2.5rem;
   text-align: center;
-  width: 100%;
-  padding: 5px;
 }
 
 .small-screen-menu li a {
@@ -146,18 +152,18 @@ a:hover {
   text-decoration: none;
 }
 .showMenu {
-  animation: fadeIn 1s ease;
+  animation: fadeInMenu 1s ease;
 } 
-@keyframes fadeIn {
+@keyframes fadeInMenu {
   from {
     transform: translateY(-10px);
     opacity: 0
   }
 }
 .removeMenu {
-  animation: fadeOut 1s ease;
+  animation: fadeOutMenu 1s ease;
 }
-@keyframes fadeOut {
+@keyframes fadeOutMenu {
   to {
     transform: translateY(-10px);
     opacity: 0
@@ -441,5 +447,14 @@ a:hover {
   }
 }
 
+/* FAQ */
+#faq-section .accordion-title {
+  font-weight: 600;
+  color: darkslateblue;
+}
+.input-group-field {
+  width: 100%;      
+  font-size: 1rem;
+}
 
 
