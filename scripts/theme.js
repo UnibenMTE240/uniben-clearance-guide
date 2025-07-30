@@ -13,7 +13,7 @@ if (toggleBtn) {
   toggleBtn.addEventListener("click", () => {
     const isDark = html.classList.toggle("dark-mode");
     localStorage.setItem("theme", isDark ? "dark" : "light");
-   // toggleBtn.innerHTML = isDark ? `<i class="fas fa-sun"></i>`  : `<i class="fas fa-moon"></i>`;
+    
     if (isDark) {
       toggleBtn.innerHTML = `<i class="fas fa-sun"></i>`;
       toggleBtn.setAttribute('aria-label', 'Switch to light mode');
@@ -23,3 +23,7 @@ if (toggleBtn) {
     } 
   });
 }
+
+
+
+

@@ -56,16 +56,19 @@ if (docTitle && pgTitle) {
     window.addEventListener('scroll', changeName)
     
     function changeName() {
+        const isDarkMode = html.classList.contains("dark-mode");
         const rect = docTitle.getBoundingClientRect();
+        
         if (rect.top < 43 && pageTitle.textContent != pgTitles.toUpperCase()) {
-            pageTitle.style.color = "#00795f";
+            isDarkMode ? pageTitle.style.color = "limegreen" : pageTitle.style.color = "#00795f";
             pageTitle.textContent = pgTitles.toUpperCase();
             pageTitle.classList.add("fadeMove");
         } else if (rect.top > 55 && pageTitle.textContent != "UNIBEN CLEARANCE GUIDE") {
-            pageTitle.style.color = "indigo";
+            isDarkMode ? pageTitle.style.color = "plum" : pageTitle.style.color = "indigo";
             pageTitle.textContent = "UNIBEN CLEARANCE GUIDE";
             pageTitle.classList.add("fadeMoveI");
         }
+        
     }
 }
 if (pageTitle) {
@@ -77,22 +80,22 @@ if (pageTitle) {
 
 const links = document.querySelectorAll("a");
 
-if (links) {
-    links.forEach(item => {
-        const href = item.getAttribute("href");
+links.forEach(item => {
+    const href = item.getAttribute("href");
 
-        // Only continue if href starts with '#' and is not just '#'
-        if (href && href.startsWith("#") && href.length > 1) {
-            item.addEventListener("click", (e) => {
-                e.preventDefault();
-                const targetSection = document.querySelector(href);
-                if (targetSection) {
-                    targetSection.scrollIntoView({ behavior: "smooth", block: "center" });
-                }
-            });
-        }
-    });
-}
+    if (href && href.startsWith("#") && href.length > 1) {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetSection = document.querySelector(href);
+            const h2 = targetSection?.querySelector("h2");
+
+            if (h2) {
+                h2.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+        });
+    }
+});
+
 
 const checklist = document.querySelectorAll(".checklist a");
 if (checklist) {
@@ -108,9 +111,7 @@ if (checklist) {
     });
 }
 
-
-
-  // Scroll to Top Button Toggle
+// Scroll to Top Button Toggle
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 if (scrollToTopBtn) {
   window.addEventListener("scroll", () => {
