@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 
     <!-- Open Graph -->
 				<meta property="og:title" content="How to Accept Admission on JAMB CAPS - UNIBEN 100L Clearance Guide" />
@@ -33,87 +35,13 @@
 </head>
 <body>
 				
-				<!-- Menu content -->
-				 <div class="grid-container show-for-small-only align-center-middle" id="me_nu" data-reveal data-animation-in="slide-in-left" data-animation-out="slide-out-left">              
-              <div class="grid-x grid-margin-x">                                           		
-                                    
-              	<button class="close-button" id="mnClBut" data-close aria-label="close menu">
-        							<i class="fas fa-close" style="color: #4B0082; font-size: 2.1rem"></i>
-    								</button>
-                                  
-             <ul class="no-bullet">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#guide">Guide</a></li>
-                <li><a href="#downloads">Online Clearance</a></li>
-                 <li><a href="#downloads">Physical Clearance</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#updates">Updates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-                  
-              </div>   										
-								</div>
-					<!-- Menu content ends here-->
-				
-				<!-- HEADER -->				 
-    <!-- FOR SMALL SCREENS ONLY -->
-    <header class="grid-container">
-        <div class="grid-x">
-            <!--
-            <div class="cell small-2 medium-1 large-1" onclick=window.location.href="index.html">
-                <img src="asset/logo/lg.png" alt="Logo" class="responsive-img">
-            </div>
-            -->
-            <div class="cell small-10 medium-9 large-8 align-center-middle" onclick=window.location.href="index.html">
-                <span class="siteNm docLgNm">UNIBEN CLEARANCE GUIDE</span>
-            </div>
-            <div class="cell small-2 medium-2 large-2 align-center-middle show-for-small-only">
-                <button class="button hollow menuBut" id="mnBut" data-open="me_nu" aria-label="menu" aria-expanded="false">
-                    <i class="fas fa-align-right"></i>
-                    </button>
-                </div>
-            </div>
-        
-        
-<!-- FOR MEDIUM AND LARGE SCREENS -->
-        <div class="hide-for-small-only lgScrMunuCont align-center-middle text-center">
-           <ul class="grid-x no-bullet lgScrMenu text-center">            
-              <li>
-                  <a href="index.html" style="border: 1px solid darkslateblue; border-radius: 25px;">
-                    <i class="fa fa-home"></i> HOME
-                    </a>
-              </li>
-               <li>
-                   <a href="#">
-            											<i class="fa fa-laptop"></i> Online Clearance
-        																</a>
-    														</li>
- 													   <li>
-                   <a href="#">
-            											<i class="fa fa-university"></i> Physical Clearance
-        																</a>
-    														</li>
-															 <li>
-                   <a href="#">
-            											<i class="fa fa-question"></i> FAQ
-        																</a>
-    														</li>
-																			<li>
-                   <a href="#">
-            											<i class="fa fa-info-circle"></i> Updates
-        																</a>
-    														</li>
-																<li>
-                   <a href="#">
-            											<i class="fa fa-phone"></i> Contact
-        																</a>
-    														</li>
-        </ul>
-</div>   
-				</header>
+<header class="grid-container" id="header"></header>
 				
 				<main class="grid-container">
 								
+				     <button id="darkToggle" class="dark-toggle-btn" aria-label="Switch to dark mode">
+             <i class="fas fa-moon"></i>
+        </button>
 
 <div class="grid-x grid-margin-x guide-section">
    
@@ -196,23 +124,19 @@
 			
 				
 			<!-- FOOTER -->
-        <footer class="grid-container" id="footer">
-            <div class="grid-x grid-margin-x">
-               <div class="cell align-center-middle text-center ftEnd" style="margin-top: 10%">
-                  <a href="mailto:unibenmte240@gmail.com,ohioalabi@gmail.com?subject=I%20Want%20To%20Support%20The%20MTE240%20Project" class="text-center" aria-label="Email to support project">Support project</a> •
-      						       <a href="mailto:unibenmte240@gmail.com" class="text-center">Contact MTE240</a>
-              			 <p class="text-center copyright">&copy; 2025 UNIBEN Mechatronics Eng 240. All rights reserved</p>
-             </div>
-            </div>
-        </footer>
-				
+        <footer class="footer-section" id="footer"></footer>
+     			
 				
 				    <script src="scripts/js/vendor/jquery.js"></script>
         <script src="scripts/js/vendor/what-input.js"></script>
         <script src="scripts/js/vendor/foundation.min.js"></script>
         <script src="scripts/gScript.js"></script>
         <script src="scripts/theme.js"></script>
-        <script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   
+    <script>
+  						AOS.init();
+        
             $(document).foundation();
 				</script>
 				

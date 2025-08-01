@@ -15,93 +15,90 @@
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 				
 </head>
 <body>
     
-     <div class="grid-container show-for-small-only align-center-middle" id="me_nu" data-reveal data-animation-in="slide-in-left" data-animation-out="slide-out-left">              
-              <div class="grid-x grid-margin-x">                 
-                                    
-              	<button class="close-button" id="mnClBut" data-close aria-label="close menu">
-        							<i class="fas fa-close" style="color: #4B0082; font-size: 2.1rem"></i>
-    								</button>
-                                  
-             <ul class="no-bullet">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Document Guide</a></li>
-                <li><a href="#downloads">Online Clearance</a></li>
-                 <li><a href="#downloads">Physical Clearance</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#updates">Updates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-                  
-              </div>   										
-								</div>
-
-    <!-- HEADER -->
-    <!-- FOR SMALL SCREENS ONLY -->
-    <header class="grid-container">
-        <div class="grid-x">
-            <!--
-            <div class="cell small-2 medium-1 large-1" onclick=window.location.href="index.html">
-                <img src="asset/logo/lg.png" alt="Logo" class="responsive-img">
-            </div>
-            -->
+     <header class="grid-container">
+         <div class="grid-x">      
             <div class="cell small-10 medium-9 large-8 align-center-middle" onclick=window.location.href="index.html">
                 <span class="siteNm docLgNm">UNIBEN CLEARANCE GUIDE</span>
             </div>
             <div class="cell small-2 medium-2 large-2 align-center-middle show-for-small-only">
-                <button class="button hollow menuBut" id="mnBut" data-open="me_nu" aria-label="menu" aria-expanded="false">
-                    <i class="fas fa-align-right"></i>
+                <button class="button hollow menuBut" id="mnBut" aria-label="menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
+                     
+        <!-- FOR SMALL SCREENS ONLY -->
+    <div class="grid-container show-for-small-only small-screen-menu">
+            <div class="grid-x grid-margin-x">
+                <button class="closeMenuButton" id="mnClBut" aria-label="Close Menu"><i class="fas fa-close"></i></button>
+             <div class="cell">
+              <ul class="no-bullet">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Document Upload Guidelines</a></li>                
+                <li><a href="index.html#online-clearance" onclick="closeMenu()">Online Clearance</a></li>
+                <li><a href="index.html#physical-clearance" onclick="closeMenu()">Physical Clearance</a></li>
+                <li><a href="record-file.html">Record File</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>                       
+            </div>
+        </div>
+    </div>
         
-        
-<!-- FOR MEDIUM AND LARGE SCREENS -->
-        <div class="hide-for-small-only lgScrMunuCont align-center-middle text-center">
+    
+        <!-- FOR MEDIUM AND LARGE SCREENS -->
+      <div class="hide-for-small-only lgScrMunuCont align-center-middle text-center">
            <ul class="grid-x no-bullet lgScrMenu text-center">            
               <li>
-                  <a href="index.html" style="border: 1px solid darkslateblue; border-radius: 25px;">
-                    <i class="fa fa-home"></i> HOME
+                  <a href="index.html">
+                    <i class="fas fa-home"></i> HOME
                     </a>
               </li>
                 <li>
                    <a href="#">
-            											<i class="fa fa-info-circle"></i> Document Guide
+            											<i class="fas fa-info-circle"></i> Document Upload Guidelines
         																</a>
     														</li>
                <li>
-                   <a href="#">
-            											<i class="fa fa-laptop"></i> Online Clearance
+                   <a href="#online-clearance">
+            											<i class="fas fa-laptop"></i> Online Clearance
         																</a>
     														</li>
  													   <li>
-                   <a href="#">
-            											<i class="fa fa-university"></i> Physical Clearance
+                   <a href="#physical-clearance">
+            											<i class="fas fa-university"></i> Physical Clearance
+        																</a>
+    														</li>
+               <li>
+                   <a href="record-file.html">
+            											<i class="fas fa-folder"></i> Record File
         																</a>
     														</li>
 															 <li>
-                   <a href="#">
-            											<i class="fa fa-question"></i> FAQ
+                   <a href="faq.html">
+            											<i class="fas fa-question"></i> FAQ
         																</a>
-    														</li>
-																			<li>
-                   <a href="#">
-            											<i class="fa fa-info-circle"></i> Updates
-        																</a>
-    														</li>
+    														</li>																			
 																<li>
                    <a href="#">
             											<i class="fa fa-phone"></i> Contact
         																</a>
     														</li>
         </ul>
-</div>        
+</div> 
      </header>
 
     <main>
+        
+        <button id="darkToggle" class="dark-toggle-btn" aria-label="Switch to dark mode">
+             <i class="fas fa-moon"></i>
+        </button>
+        
   <section class="grid-container guide-section">
     <div class="grid-x grid-padding-x align-center">
        <div class="cell small-11 docTtl">
@@ -109,7 +106,7 @@
     </div>
       <div class="cell large-10 medium-12">
         <p class="lead text-center">
-          UNIBEN requires every student to obtain a record file before completing physical clearance. Follow the official process below to get yours.
+          UNIBEN requires every student to obtain a record file. Follow the official process below to get yours.
         </p>
 
         <div class="callout warning text-center">
@@ -117,12 +114,12 @@
         </div>
 
         <div class="step">
-          <h4><i class="fas fa-money-bill-wave"></i> Step 1: Pay ₦2,000 on Remita</h4>
+          <h4><i class="fas fa-money-bill-wave"></i> Step 1: Pay ₦3,000 on Remita</h4>
           <p>Go to <a href="https://www.remita.net/" target="_blank">www.remita.net</a> and generate a payment for the record file under UNIBEN. Make sure you:</p>
           <ul>
-            <li>Select <strong>University of Benin</strong> as the institution</li>
-            <li>Choose “Record File” or “Student File” as the service</li>
-            <li>Pay the sum of <strong>₦2,000</strong></li>
+            <li>Select <strong>University of Benin - 1000112</strong> as the biller</li>
+            <li>Choose or “Student's Record File” as the service</li>
+            <li>Pay the sum of <strong>₦3,000</strong></li>
             <li>Print the Remita payment receipt after successful payment</li>
           </ul>
         </div>
@@ -133,17 +130,8 @@
         </div>
 
         <div class="step">
-          <h4><i class="fas fa-building"></i> Step 3: Go to Exams & Records to Collect File</h4>
-          <p>With your UNIBEN receipt, proceed to the <strong>Exams and Records Unit</strong> (usually inside the Faculty of Education building) and present it to collect your record file.</p>
-        </div>
-
-        <div class="step">
-          <h4><i class="fas fa-file-signature"></i> Step 4: Label and Arrange Your File</h4>
-          <p>Write your full name, registration number, department, and faculty on the file. Neatly arrange your printed clearance documents inside.</p>
-        </div>
-
-        <div class="callout success text-center">
-          <p><i class="fas fa-check-circle"></i> ✅ You’re now ready to proceed with physical clearance using your official record file.</p>
+          <h4><i class="fas fa-building"></i> Step 3: Go to Exams & Records to Collect Record File</h4>
+          <p>With your UNIBEN receipt, proceed to the <strong>Exams and Records Unit</strong> and present it to collect your record file.</p>
         </div>
 
         <div class="text-center">
@@ -163,60 +151,18 @@
 </button>
    
 				 <!-- FOOTER -->
-    <footer class="footer-section">
-  <div class="grid-container">
-    <div class="grid-x grid-padding-x grid-margin-x align-top">
-
-      <div class="cell small-12 medium-4">
-        <h5><i class="fas fa-university"></i> UNIBEN Clearance Help</h5>
-        <p>
-          A helpful guide for 100-level students to complete their online and physical clearance process at UNIBEN.
-        </p>
-      </div>
-
-      <div class="cell small-12 medium-4">
-        <h5><i class="fas fa-link"></i> Quick Links</h5>
-        <ul class="footer-links no-bullet">
-          <li><a href="index.html"> Home</a></li>
-          <li><a href="how-to-accept-admission.html"> Accept Admission</a></li>
-          <li><a href="document-guidelines.html"> Document Guide</a></li>
-          <li><a href="record-file.html"> Record File</a></li>
-          <li><a href="faq.html"> FAQs</a></li>
-        </ul>
-      </div>
-
-      <div class="cell small-12 medium-4 text-center medium-text-left">
-        <h5><i class="fas fa-headset"></i> Need Help?</h5>
-        <p>Join our WhatsApp group for help and updates.</p>
-        <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="button small success">
-          <i class="fab fa-whatsapp"></i> Join WhatsApp Group
-        </a>
-      </div>
-
-    </div>
-
-    <div class="grid-x align-center text-center">
-      <div class="cell small-12">
-        <hr />
-        <p class="footer-credit">
-          &copy; <span id="year"></span> UNIBEN Clearance Assistant. All rights reserved.
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
-    <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+     <footer class="footer-section" id="footer"></footer>
     
         <script src="scripts/js/vendor/jquery.js"></script>
         <script src="scripts/js/vendor/what-input.js"></script>
         <script src="scripts/js/vendor/foundation.min.js"></script>
         <script src="scripts/gScript.js"></script>
         <script src="scripts/theme.js"></script>
-        <script>
-            $(document).foundation();
-        </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+  						AOS.init();
+       $(document).foundation()
+    </script>
 				
 </body>
 </html>

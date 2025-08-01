@@ -15,95 +15,91 @@
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
 </head>
 <body>
 
-    	<!-- Menu content -->
-				 <div class="grid-container show-for-small-only align-center-middle" id="me_nu" data-reveal data-animation-in="slide-in-left" data-animation-out="slide-out-left">              
-              <div class="grid-x grid-margin-x">                                           		
-                                    
-              	<button class="close-button" id="mnClBut" data-close aria-label="close menu">
-        							<i class="fas fa-close" style="color: #4B0082; font-size: 2.1rem"></i>
-    								</button>
-                                  
-             <ul class="no-bullet">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="document-guidelines.html">Document Guidelines</a></li>
-                <li><a href="#downloads">Online Clearance</a></li>
-                 <li><a href="#downloads">Physical Clearance</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#updates">Updates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
                   
-              </div>   										
-								</div>
-					<!-- Menu content ends here-->
-    
-<header class="grid-container">
-        <div class="grid-x">
-            <!--
-            <div class="cell small-2 medium-1 large-1" onclick=window.location.href="index.html">
-                <img src="asset/logo/lg.png" alt="Logo" class="responsive-img">
-            </div>
-            -->
+           <header class="grid-container">
+         <div class="grid-x">      
             <div class="cell small-10 medium-9 large-8 align-center-middle" onclick=window.location.href="index.html">
                 <span class="siteNm docLgNm">UNIBEN CLEARANCE GUIDE</span>
             </div>
             <div class="cell small-2 medium-2 large-2 align-center-middle show-for-small-only">
-                <button class="button hollow menuBut" id="mnBut" data-open="me_nu" aria-label="menu" aria-expanded="false">
-                    <i class="fas fa-align-right"></i>
+                <button class="button hollow menuBut" id="mnBut" aria-label="menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
+                     
+        <!-- FOR SMALL SCREENS ONLY -->
+    <div class="grid-container show-for-small-only small-screen-menu">
+            <div class="grid-x grid-margin-x">
+                <button class="closeMenuButton" id="mnClBut" aria-label="Close Menu"><i class="fas fa-close"></i></button>
+             <div class="cell">
+              <ul class="no-bullet">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Document Upload Guidelines</a></li>                
+                <li><a href="index.html#online-clearance" onclick="closeMenu()">Online Clearance</a></li>
+                <li><a href="index.html#physical-clearance" onclick="closeMenu()">Physical Clearance</a></li>
+                <li><a href="record-file.html">Record File</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>                       
+            </div>
+        </div>
+    </div>
         
-        
-<!-- FOR MEDIUM AND LARGE SCREENS -->
-        <div class="hide-for-small-only lgScrMunuCont align-center-middle text-center">
+    
+        <!-- FOR MEDIUM AND LARGE SCREENS -->
+      <div class="hide-for-small-only lgScrMunuCont align-center-middle text-center">
            <ul class="grid-x no-bullet lgScrMenu text-center">            
               <li>
-                  <a href="index.html" style="border: 1px solid darkslateblue; border-radius: 25px;">
-                    <i class="fa fa-home"></i> HOME
+                  <a href="index.html">
+                    <i class="fas fa-home"></i> HOME
                     </a>
               </li>
                 <li>
                    <a href="#">
-            											<i class="fa fa-info-circle"></i> Document Guide
+            											<i class="fas fa-info-circle"></i> Document Upload Guidelines
         																</a>
     														</li>
                <li>
-                   <a href="#">
-            											<i class="fa fa-laptop"></i> Online Clearance
+                   <a href="#online-clearance">
+            											<i class="fas fa-laptop"></i> Online Clearance
         																</a>
     														</li>
  													   <li>
-                   <a href="#">
-            											<i class="fa fa-university"></i> Physical Clearance
+                   <a href="#physical-clearance">
+            											<i class="fas fa-university"></i> Physical Clearance
+        																</a>
+    														</li>
+               <li>
+                   <a href="record-file.html">
+            											<i class="fas fa-folder"></i> Record File
         																</a>
     														</li>
 															 <li>
-                   <a href="#">
-            											<i class="fa fa-question"></i> FAQ
+                   <a href="faq.html">
+            											<i class="fas fa-question"></i> FAQ
         																</a>
-    														</li>
-																			<li>
-                   <a href="#">
-            											<i class="fa fa-info-circle"></i> Updates
-        																</a>
-    														</li>
+    														</li>																			
 																<li>
                    <a href="#">
             											<i class="fa fa-phone"></i> Contact
         																</a>
     														</li>
         </ul>
-</div>        
+</div> 
      </header>
                        
         <!-- MAIN -->
   <main class="grid-container">
     
+       <button id="darkToggle" class="dark-toggle-btn" aria-label="Switch to dark mode">
+             <i class="fas fa-moon"></i>
+        </button>
+      
 <section class="guide-section">
   <div class="grid-x grid-padding-x align-center">
      <div class="guideTitleCell docTtl">
@@ -190,7 +186,7 @@
       </ul>
 
       <div class="screenshot-preview">
-        <img src="asset/DCIM/sampleI.jpg" alt="JAMB Admission Letter Institution Copy example" class="responsive-img preview" loading="lazy">
+        <img src="asset/DCIM/doc1.jpg" alt="JAMB Admission Letter Institution Copy example" class="responsive-img preview" loading="lazy">
         <p class="text-center small text-gray">Sample JAMB Admission Letter (Institution Copy)</p>
       </div>
     </div>
@@ -223,7 +219,7 @@
       </ul>
 
       <div class="screenshot-preview">
-        <img src="asset/DCIM/sampleII.jpg" alt="JAMB Result Slip example" class="responsive-img preview">
+        <img src="asset/DCIM/doc2.jpg" alt="JAMB Result Slip example" class="responsive-img preview">
         <p class="text-center small text-gray">Sample JAMB Result Slip</p>
       </div>
     </div>
@@ -257,7 +253,7 @@
       </ul>
 
       <div class="screenshot-preview">
-        <img src="assets/screenshots/student-acceptance-letter.jpg" alt="Sample Student Acceptance Letter" class="responsive-img preview">
+        <img src="asset/DCIM/doc3.jpg" alt="Sample Student Acceptance Letter" class="responsive-img preview">
         <p class="text-center small text-gray">Sample Acceptance Letter (typed, signed, and scanned)</p>
       </div>
     </div>
@@ -290,7 +286,7 @@
       </ul>
 
       <div class="screenshot-preview">
-        <img src="assets/screenshots/guarantors-letter.jpg" alt="Sample Guarantor's Letter" class="responsive-img preview">
+        <img src="asset/DCIM/doc4.jpg" alt="Sample Guarantor's Letter" class="responsive-img preview">
         <p class="text-center small text-gray">Sample Guarantor’s Letter (Typed and Signed)</p>
       </div>
     </div>
@@ -319,11 +315,7 @@
         <li><i class="fas fa-times-circle text-danger"></i> Uploading faded or blurry scans</li>
         <li><i class="fas fa-times-circle text-danger"></i> Missing stamp or incomplete certificate</li>
       </ul>
-
-      <div class="screenshot-preview">
-        <img src="assets/screenshots/birth-cert.jpg" alt="Sample Birth Certificate" class="responsive-img preview">
-        <p class="text-center small text-gray">Sample Birth Certificate</p>
-      </div>
+        
     </div>
   </div>
 </section>
@@ -353,7 +345,7 @@
       </ul>
 
       <div class="screenshot-preview">
-        <img src="assets/screenshots/lga-certificate.jpg" alt="Sample Local Government of Origin Certificate" class="responsive-img preview">
+        <img src="asset/DCIM/doc5.jpg" alt="Sample Local Government of Origin Certificate" class="responsive-img preview">
         <p class="text-center small text-gray">Sample Local Government of Origin Certificate</p>
       </div>
     </div>
@@ -385,8 +377,8 @@
       </ul>
 
       <div class="screenshot-preview">
-        <img src="assets/screenshots/waec-certificate.jpg" alt="Sample WAEC or NECO Certificate" class="responsive-img preview">
-        <p class="text-center small text-gray">Sample WAEC / NECO Certificate</p>
+        <img src="asset/DCIM/doc6.jpg" alt="Sample WAEC or NECO Certificate" class="responsive-img preview">
+        <p class="text-center small text-gray">Sample WAEC Certificate</p>
       </div>
     </div>
   </div>
@@ -417,10 +409,6 @@
         <li><i class="fas fa-times-circle text-danger"></i> Hiding or blurring the PIN on the card</li>
       </ul>
 
-      <div class="screenshot-preview">
-        <img src="assets/screenshots/waec-scratch-card.jpg" alt="Sample WAEC or NECO Scratch Card" class="responsive-img preview">
-        <p class="text-center small text-gray">Sample WAEC / NECO Scratch Card</p>
-      </div>
     </div>
   </div>
 </section>
@@ -450,10 +438,6 @@
         <li><i class="fas fa-times-circle text-danger"></i> Cropped or stretched images</li>
       </ul>
 
-      <div class="screenshot-preview">
-        <img src="assets/screenshots/passport-red-bg.jpg" alt="Sample Passport Photograph with Red Background" class="responsive-img preview">
-        <p class="text-center small text-gray">Sample Passport Photograph (Red Background)</p>
-      </div>
     </div>
   </div>
 </section>
@@ -484,7 +468,7 @@
       </ul>
 
       <div class="screenshot-preview">
-        <img src="assets/screenshots/affidavit-cult.jpg" alt="Sample Cult Non-Membership Affidavit" class="responsive-img preview">
+        <img src="asset/DCIM/doc7.jpg" alt="Sample Cult Non-Membership Affidavit" class="responsive-img preview">
         <p class="text-center small text-gray">Sample Affidavit of Non-Membership of Secret Cult</p>
       </div>
     </div>
@@ -517,7 +501,7 @@
       </ul>
 
       <div class="screenshot-preview">
-        <img src="assets/screenshots/good-conduct-affidavit.jpg" alt="Sample Affidavit of Good Conduct" class="responsive-img preview">
+        <img src="asset/DCIM/doc8.jpg" alt="Sample Affidavit of Good Conduct" class="responsive-img preview">
         <p class="text-center small text-gray">Sample Affidavit of Good Conduct</p>
       </div>
     </div>
@@ -646,22 +630,18 @@
   </main>
 
     <!-- FOOTER -->
-        <footer class="grid-container" id="footer">
-            <div class="grid-x grid-margin-x">
-               <div class="cell align-center-middle text-center ftEnd" style="margin-top: 10%">
-                  <a href="mailto:unibenmte240@gmail.com,ohioalabi@gmail.com?subject=I%20Want%20To%20Support%20The%20MTE240%20Project" class="text-center" aria-label="Email to support project">Support project</a> •
-      						       <a href="mailto:unibenmte240@gmail.com" class="text-center">Contact MTE240</a>
-              			 <p class="text-center copyright">&copy; 2025 UNIBEN Mechatronics Eng 240. All rights reserved</p>
-             </div>
-            </div>
-        </footer>
-
+      <footer class="footer-section" id="footer"></footer>
+      
        <script src="scripts/js/vendor/jquery.js"></script>
         <script src="scripts/js/vendor/what-input.js"></script>
         <script src="scripts/js/vendor/foundation.min.js"></script>
         <script src="scripts/gScript.js"></script>
        <script src="scripts/theme.js"></script>
-        <script>
+	 			<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   
+    <script>
+  						AOS.init();
+        
             $(document).foundation();
         </script>
   

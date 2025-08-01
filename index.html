@@ -41,14 +41,9 @@
   
     <!-- HEADER -->
     <header class="grid-container">
-        <div class="grid-x">
-            <!--
-            <div class="cell small-2 medium-1 large-1" onclick=window.location.href="index.html">
-                <img src="asset/logo/lg.png" alt="Logo" class="responsive-img">
-            </div>
-            -->
+         <div class="grid-x">      
             <div class="cell small-10 medium-9 large-8 align-center-middle" onclick=window.location.href="index.html">
-                <span class="siteNm">UNIBEN CLEARANCE GUIDE</span>
+                <span class="siteNm docLgNm">UNIBEN CLEARANCE GUIDE</span>
             </div>
             <div class="cell small-2 medium-2 large-2 align-center-middle show-for-small-only">
                 <button class="button hollow menuBut" id="mnBut" aria-label="menu" aria-expanded="false">
@@ -56,70 +51,66 @@
                     </button>
                 </div>
             </div>
-            
-        
-<!-- FOR MEDIUM AND LARGE SCREENS -->
-        <div class="hide-for-small-only lgScrMunuCont align-center-middle text-center">
-           <ul class="grid-x no-bullet lgScrMenu text-center">            
-              <li>
-                  <a href="index.html" style="border: 1px solid darkslateblue; border-radius: 25px;">
-                    <i class="fa fa-home"></i> HOME
-                    </a>
-              </li>
-                <li>
-                   <a href="#">
-            											<i class="fa fa-info-circle"></i> Document Guide
-        																</a>
-    														</li>
-               <li>
-                   <a href="#">
-            											<i class="fa fa-laptop"></i> Online Clearance
-        																</a>
-    														</li>
- 													   <li>
-                   <a href="#">
-            											<i class="fa fa-university"></i> Physical Clearance
-        																</a>
-    														</li>
-															 <li>
-                   <a href="#">
-            											<i class="fa fa-question"></i> FAQ
-        																</a>
-    														</li>
-																			<li>
-                   <a href="#">
-            											<i class="fa fa-info-circle"></i> Updates
-        																</a>
-    														</li>
-																<li>
-                   <a href="#">
-            											<i class="fa fa-phone"></i> Contact
-        																</a>
-    														</li>
-        </ul>
-</div>        
-    </header>
-    
-              <!-- FOR SMALL SCREENS ONLY -->             
+                     
+        <!-- FOR SMALL SCREENS ONLY -->
     <div class="grid-container show-for-small-only small-screen-menu">
             <div class="grid-x grid-margin-x">
                 <button class="closeMenuButton" id="mnClBut" aria-label="Close Menu"><i class="fas fa-close"></i></button>
              <div class="cell">
               <ul class="no-bullet">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Document Upload Guidelines</a></li>
-                <li><a href="#downloads">Online Clearance</a></li>
-                <li><a href="#downloads">Physical Clearance</a></li>
+                <li><a href="#">Document Upload Guidelines</a></li>                
+                <li><a href="#online-clearance" onclick="closeMenu()">Online Clearance</a></li>
+                <li><a href="#physical-clearance" onclick="closeMenu()">Physical Clearance</a></li>
+                <li><a href="record-file.html">Record File</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>                       
             </div>
         </div>
     </div>
+        
     
-    
-    
-    
-  
+        <!-- FOR MEDIUM AND LARGE SCREENS -->
+      <div class="hide-for-small-only lgScrMunuCont align-center-middle text-center">
+           <ul class="grid-x no-bullet lgScrMenu text-center">            
+              <li>
+                  <a href="index.html">
+                    <i class="fas fa-home"></i> HOME
+                    </a>
+              </li>
+                <li>
+                   <a href="#">
+            											<i class="fas fa-info-circle"></i> Document Upload Guidelines
+        																</a>
+    														</li>
+               <li>
+                   <a href="#online-clearance">
+            											<i class="fas fa-laptop"></i> Online Clearance
+        																</a>
+    														</li>
+ 													   <li>
+                   <a href="#physical-clearance">
+            											<i class="fas fa-university"></i> Physical Clearance
+        																</a>
+    														</li>
+               <li>
+                   <a href="record-file.html">
+            											<i class="fas fa-folder"></i> Record File
+        																</a>
+    														</li>
+															 <li>
+                   <a href="faq.html">
+            											<i class="fas fa-question"></i> FAQ
+        																</a>
+    														</li>																			
+																<li>
+                   <a href="#">
+            											<i class="fa fa-phone"></i> Contact
+        																</a>
+    														</li>
+        </ul>
+</div> 
+     </header>
         <!-- MAIN -->
         <main class="grid-container cont"  id="dynaCont">          
                 <div class="grid-x grid-margin-x align-center-middle text-center">
@@ -456,7 +447,7 @@
         🗂️ This step usually takes place after resumption. Check your faculty's announcements to know when to submit.
       </p>
       <div class="text-center">
-        <a href="#physical-clearance-guide" class="button secondary">View Instructions</a>
+        <a href="#physical-clearance-guide" class="button custom">View Instructions</a>
       </div>
     </div>
   </div>
@@ -623,51 +614,15 @@
         </main>    
 
         <!-- FOOTER -->
-<footer class="footer-section">
-  <div class="grid-container">
-    <div class="grid-x grid-padding-x grid-margin-x align-top">
-
-      <div class="cell small-12 medium-4">
-        <h5 data-aos="zoom-in" data-aos-duration="1200"><i class="fas fa-university"></i> UNIBEN Clearance Help</h5>
-        <p data-aos="fade-down" data-aos-duration="1800">
-          A helpful guide for 100-level students to complete their online and physical clearance process at UNIBEN.
-        </p>
-      </div>
-
-      <div class="cell small-12 medium-4">
-        <h5 data-aos="zoom-in" data-aos-duration="1200"><i class="fas fa-link"></i> Quick Links</h5>
-        <ul class="footer-links no-bullet">
-          <li data-aos="fade-down" data-aos-duration="1500"><a href="index.html"> Home</a></li>
-          <li data-aos="fade-down" data-aos-duration="1700"><a href="how-to-accept-admission.html"> Accept Admission</a></li>
-          <li data-aos="fade-down" data-aos-duration="1900"><a href="#" onclick="alert('Oops! This page is still under development, Please contact MTE240 Devs if you think this is a broken link.')"> Document Guide</a></li>
-          <li data-aos="fade-down" data-aos-duration="2100"><a href="record-file.html"> Record File</a></li>
-          <li data-aos="fade-down" data-aos-duration="2300"><a href="faq.html"> FAQs</a></li>
-        </ul>
-      </div>
-
-      <div class="cell small-12 medium-4 text-center medium-text-left">
-        <h5><i class="fas fa-headset"></i> Need Help?</h5>
-        <p>Join our WhatsApp group for help and updates.</p>
-        <a href="https://chat.whatsapp.com/BVq7fm3xgFiHfBxZm8VlLv?mode=ac_t" target="_blank" class="button small success" style="border-radius: 2rem;">
-          <i class="fab fa-whatsapp"></i> Join WhatsApp Group
-        </a>
-      </div>
-
-    </div>
-
-    <div class="grid-x align-center text-center">
-      <div class="cell small-12" data-aos="zoom-in" data-aos-duration="1200">
-        <hr />
-        <p class="footer-credit">
-          &copy; <span id="year"></span> UNIBEN Clearance Assistant. All rights reserved.
-        </p>
-      </div>
-    </div>
-  </div>
+    <footer class="footer-section" id="footer"></footer>
+            
+            
+     <script>
+        
+    </script>
 </footer> 
     <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  </script>
     
         <script src="scripts/js/vendor/jquery.js"></script>
         <script src="scripts/js/vendor/what-input.js"></script>
