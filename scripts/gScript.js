@@ -6,6 +6,7 @@ bckToHm.addEventListener('click', () => {
 });
 }
 
+
 // FOR MENU
 const menu = document.querySelector(".small-screen-menu");
 const menuButton = document.getElementById("mnBut");
@@ -24,28 +25,17 @@ menuButton.addEventListener("click", function () {
     }
 });
     menuClButton.addEventListener("click", function () {
-        menuButton.setAttribute("aria-expanded", "false");
+        closeMenu();
+    });
+}
+function closeMenu() {
+    menuButton.setAttribute("aria-expanded", "false");
         menu.classList.add("removeMenu");
         setTimeout( () => {
             menu.style.display = "none";
         }, 1000);
-    });
 }
 
-
-
-    // CLEARANCE
-const onClButton = document.getElementById("onCl");
-const phyClButton = document.getElementById("phyCl");
-
-if (onClButton && phyClButton) {
-    onClButton.addEventListener("click", () => {
-        window.location.href="#";
-    });
-    phyClButton.addEventListener("click", () => {
-        window.location.href="#";
-    });
-}
 
 const docTitle = document.querySelector(".docTtl");
 const pageTitle = document.querySelector(".docLgNm");
@@ -78,7 +68,8 @@ if (pageTitle) {
     })
 }
 
-const links = document.querySelectorAll("a");
+function viewScroll() {
+    const links = document.querySelectorAll("a");
 
 links.forEach(item => {
     const href = item.getAttribute("href");
@@ -95,6 +86,8 @@ links.forEach(item => {
         });
     }
 });
+
+}
 
 
 const checklist = document.querySelectorAll(".checklist a");
@@ -128,6 +121,19 @@ if (scrollToTopBtn) {
       behavior: "smooth"
     });
   });
+}
+
+
+fetch("https://unibenmte240.github.io/MTE240/footer.html")
+.then(res => res.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+    getYear();
+    viewScroll();
+});
+
+function getYear() {
+    document.getElementById("year").textContent = new Date().getFullYear();
 }
 
 /*const dyna = document.querySelector("#dynaCont");
