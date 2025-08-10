@@ -136,10 +136,14 @@ function getYear() {
     document.getElementById("year").textContent = new Date().getFullYear();
 }
 
-/*const dyna = document.querySelector("#dynaCont");
-if (dyna) {
+/*
+const title = document.querySelector("title");
+const main = document.querySelector("body");
+
+const dyna = document.querySelector("#dynaCont");
+if (dyna && title.textContent == "UNIBEN 100L Clearance Guide") {
     setTimeout(() =>{
-        dyna.innerHTML = `
+        main.innerHTML = `
          <div class="preInfo">
               <p><b>NAME</b>: MTE240 Project</p>
                 <p><b>DURATION</b>: ≈ 5 months</p>
@@ -147,8 +151,20 @@ if (dyna) {
             <p><b>DEVELOPER</b>: UNIBEN MTE240</p>
        </div>
         <div class="cell">
-        <a href="index2.html">preview homepage<a>
+        <a href="index2.html">Homepage<a>
         </div>
+         <div class="cell">
+        <a href="record-file.html">Record File<a>
+        </div>
+        
+        <footer class="grid-container">
+            <div class="grid-x grid-margin-x">
+               <div class="cell align-center-middle text-center ftLst" style="margin-top: 10%">
+               <p class="text-center copyright" style="font-size: 1rem">&copy; 2025 UNIBEN Mechatronics Eng 240. All rights reserved</p>
+             </div>
+            </div>
+        </footer>
+        
         `;
     }, 2000);
 }
