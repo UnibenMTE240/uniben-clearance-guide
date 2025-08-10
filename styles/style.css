@@ -416,6 +416,9 @@ a:hover {
   font-size: 1.3rem;
   color: indigo;
 }
+.dark-mode .preInfo p b {
+  color: plum;
+}
 .ftEnd a {
   color: indigo;
 }
