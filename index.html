@@ -41,11 +41,15 @@
   
     <!-- HEADER -->
     <header class="grid-container">
-         <div class="grid-x">      
+         <div class="grid-x">
+             <!--
+            <div class="cell small-1 medium-1 large-1 hdImg align-center-middle">
+		            <img src="asset/drawable/ic-512.png" class="responsive-img" alt="Ohio Codespace logo">
+		        </div>	   -->
             <div class="cell small-10 medium-9 large-8 align-center-middle" onclick=window.location.href="index.html">
                 <span class="siteNm docLgNm">UNIBEN CLEARANCE GUIDE</span>
             </div>
-            <div class="cell small-2 medium-2 large-2 align-center-middle show-for-small-only">
+            <div class="cell small-1 medium-2 large-2 align-center-middle show-for-small-only">
                 <button class="button hollow menuBut" id="mnBut" aria-label="menu" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                     </button>
@@ -562,6 +566,18 @@
   </div>
 </section>                      
             
+<section class="grid-container guide-section" id="hostel-booking-intro">
+  <div class="grid-x grid-padding-x align-center">
+    <div class="cell large-10 medium-12 text-center">
+      <h2><i class="fas fa-bed"></i> Hostel Booking in UNIBEN</h2>
+      <p class="lead">
+        After completing your clearance, you can apply for accommodation through the Kofa portal. Booking is done online and is first-come, first-served — so act fast when it's announced!
+      </p>
+      <a href="hostel-booking.html" class="button custom">View Hostel Booking Guide</a>
+    </div>
+  </div>
+</section>
+            
 <section class="grid-container faq-preview-section" id="faqH2">
   <div class="grid-x grid-padding-x align-center">
     <div class="cell large-10 medium-12 text-center">
@@ -632,11 +648,9 @@
     				<script src="scripts/theme.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-  AOS.init();
-
-            $(document).foundation();
-        </script>
-      <script>            
+    $(document).foundation();
+    AOS.init();
+        
     document.querySelectorAll(".lgScrMenu li").forEach(button => {
                 button.addEventListener("click", () => {
                     button.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }); // Scroll the clicked button into view smoothly                                                
