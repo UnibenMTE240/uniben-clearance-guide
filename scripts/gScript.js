@@ -8,33 +8,46 @@ bckToHm.addEventListener('click', () => {
 
 
 // FOR MENU
-const menu = document.querySelector(".small-screen-menu");
-const menuButton = document.getElementById("mnBut");
-const menuClButton = document.getElementById("mnClBut");
-if (menuButton) {
-menuButton.addEventListener("click", function () {
-    const expanded = menuButton.getAttribute("aria-expanded") === "true";
-   
-    if (!expanded) {
-        menuButton.setAttribute("aria-expanded", "true");
-        menu.classList.remove("removeMenu");
-        menu.classList.add("showMenu");
-        menu.style.display = "flex";
-    } else {
-        menuButton.setAttribute("aria-expanded", "false");
+
+const hamburger = document.getElementById("mnBut");
+    const menuContainer = document.getElementById("menuContainer");
+    const closeMenuButton = document.getElementById("closeMenuButton");
+    const overlay = document.getElementById("overlay");
+    const clearance = document.getElementById("clearance");
+    const clearanceSubmenu = document.getElementById("clearanceSubmenu");
+    const arrow = clearance.querySelector('.arrow');
+    const sub = document.querySelectorAll('.subs')
+    function openMenu() {
+      const expanded = hamburger.getAttribute("aria-expanded") === "true";
+
+      if (!expanded) {
+        hamburger.setAttribute("aria-expanded", "true");
+        menuContainer.classList.add("open");
+        overlay.classList.add("open");
+        document.body.style.overflow = 'hidden';
+      } else {
+        hamburger.setAttribute("aria-expanded", "false");
+      }
     }
-});
-    menuClButton.addEventListener("click", function () {
-        closeMenu();
+
+    function closeMenu() {
+      hamburger.setAttribute("aria-expanded", "false");
+      menuContainer.classList.remove("open");
+      overlay.classList.remove("open");
+      document.body.style.overflow = 'auto';
+    }
+
+    hamburger.addEventListener("click", openMenu);
+    closeMenuButton.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
+
+    clearance.addEventListener("click", () => {
+      clearanceSubmenu.classList.toggle("open");
+      arrow.classList.toggle("rotate");
     });
-}
-function closeMenu() {
-    menuButton.setAttribute("aria-expanded", "false");
-        menu.classList.add("removeMenu");
-        setTimeout( () => {
-            menu.style.display = "none";
-        }, 1000);
-}
+    sub.forEach(sub => {
+        sub.addEventListener('click', closeMenu);
+    });
 
 
 const docTitle = document.querySelector(".docTtl");
@@ -106,6 +119,7 @@ if (checklist) {
 
 // Scroll to Top Button Toggle
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  const closeIC = document.getElementById("closeFas");
 if (scrollToTopBtn) {
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 300) {
@@ -121,10 +135,29 @@ if (scrollToTopBtn) {
       behavior: "smooth"
     });
   });
+
+  scrollToTopBtn.addEventListener("mouseover", () => {
+    closeIC.classList.add("scrollToTopBtnAnimate");
+  });
+  scrollToTopBtn.addEventListener("mouseout", () => {
+    closeIC.classList.remove("scrollToTopBtnAnimate");
+  });
+}
+
+const whatsappBtn = document.querySelector(".whatsapp-float");
+const whatsappFloatFas = document.getElementById("whatsapp-float-fas");
+if (whatsappBtn) {
+  whatsappBtn.addEventListener("mouseover", () => {
+    whatsappFloatFas.classList.add("whatsappFloatFasAnimate");
+  });
+  whatsappBtn.addEventListener("mouseout", () => {
+    whatsappFloatFas.classList.remove("whatsappFloatFasAnimate");
+  });
 }
 
 
-fetch("https://unibenmte240.github.io/MTE240/footer.html")
+//fetch("https://unibenmte240.github.io/MTE240/footer.html")
+fetch("http://127.0.0.1:5500/footer.html")
 .then(res => res.text())
 .then(data => {
     document.getElementById("footer").innerHTML = data;
