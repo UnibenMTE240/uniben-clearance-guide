@@ -84,6 +84,20 @@
   color: black;
   font-weight: 600;
 }
+.clTyps .button:hover, .button.custom:hover, 
+#online-clearance .button:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.15);
+  background-color: inherit;
+  color: green;
+  font-weight: 700;
+  border-width: 3px;
+}
+.dark-mode .clTyps .button:hover, .dark-mode .button.custom:hover, 
+.dark-mode #online-clearance .button:hover {
+  background-color: #000;
+  color: lime;
+}
 .guide-section .fas {
   color: darkslateblue;
   font-size: 1.6rem
@@ -126,7 +140,7 @@ ul.checklist a {
 .docNm {
   position: sticky;
   z-index: 10; 
-  top: 70px;
+  top: 100px !important;
   padding: 0.5rem;
   background-color: var(--backgroundColorII);
 }
@@ -175,7 +189,7 @@ ul.checklist a {
     width: 200px
   }
   .docNm {
-    top: 80px;
+    top: 30px;
   }
 }
 .mustDoIc .fas, .acceptedIc{

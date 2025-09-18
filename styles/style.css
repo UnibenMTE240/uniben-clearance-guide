@@ -13,6 +13,7 @@
   color: red;
   background-color: red
 }
+
 .active-link {
   color: blue;
   background-color: red
@@ -31,6 +32,7 @@
 html {
   font-size: 16px;
 }
+
 body {
   width: 100vw;
   background-color: var(--backgroundColorI);
@@ -40,22 +42,26 @@ header {
   position: fixed;
   top: 0;
   z-index: 100;
-  width: 100%;
+  width: 100vw;
   background-color: rgb(255, 243, 255);
 }
+
 main {
   margin-top: 9rem;
 }
+
 p {
   font-family: var(--fontI);
   font-variation-settings:
-      "GARD" 0;
+    "GARD" 0;
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
 .siteNm {
   font-size: 1.3rem;
   font-weight: 800;
@@ -65,27 +71,33 @@ a:hover {
   color: indigo;
   display: block;
 }
+
 .fadeMove {
   animation: fadeIn 0.5s ease-in-out;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .fadeMoveI {
   animation: fadeOut 0.5s ease-in-out;
 }
+
 @keyframes fadeOut {
   from {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -97,140 +109,251 @@ a:hover {
 /* MENU FOR SMALL SCREENS */
 /* MENU FOR SMALL SCREENS */
 
-.small-screen-menu {
-  height: 100vh;
-  width: 100vw;
-  background-color: plum;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  display: none;
-  justify-content: center;
-  align-items: center
-}
-.dark-mode .small-screen-menu {
-  background-color: darkslateblue;
-}
 #mnBut {
   color: indigo;
   font-size: 1.7rem;
   border: none;
   margin: 2px;
 }
-.closeMenuButton {
+
+.hamburger {
+  font-size: 2em;
+  color: #8be9fd;
+  padding: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
   position: fixed;
-  top: 4.5rem;
-  right: 1rem;
-  background-color: transparent;
-  color: indigo;
-  border: 2px solid green;
-  padding: 0.5rem 0.75rem;
-  border-radius: 999px;
-  font-size: 1.8rem
-} 
-.dark-mode .closeMenuButton {
-  color: plum;
-}
-.small-screen-menu li {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: 2.5rem;
-  text-align: center;
+  top: 0;
+  left: 0;
+  z-index: 1001;
 }
 
-.small-screen-menu li a {
-  color: #000;
-  padding: 5px 30px;
-  font-family: var(--fontII);
-}
-.dark-mode .small-screen-menu li a {
-  color: #fff;
+.hamburger:hover {
+  color: #ff79c6;
 }
 
-.small-screen-menu li a:hover {
-  text-decoration: none;
-}
-.showMenu {
-  animation: fadeInMenu 1s ease;
-} 
-@keyframes fadeInMenu {
-  from {
-    transform: translateY(-10px);
-    opacity: 0
-  }
-}
-.removeMenu {
-  animation: fadeOutMenu 1s ease;
-}
-@keyframes fadeOutMenu {
-  to {
-    transform: translateY(-10px);
-    opacity: 0
-  }
-}
-
-/* MENU FOR LARGE AND MEDIUM SCREENS */
-/* MENU FOR LARGE AND MEDIUM SCREENS */
-.lgScrMunuCont {
-  position: relative;
-  white-space: nowrap;
-  border: 1px solid plum;
-  height: 45px;
-  background: rgba(186, 85, 211, 0.1);
-}
-
-.lgScrMenu {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
   height: 100%;
+  background-color: #44475a;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: auto;
+  /* Allow scrolling within the menu */
+}
+
+.menu-container.open {
+  transform: translateX(0);
+}
+
+.menu-header {
+  padding: 20px;
+  text-align: left;
+  font-size: 1.2em;
+  border-bottom: 1px solid #6272a4;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.lgScrMenu li {
-  padding: 20px 10px
+
+.menu-header i {
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #f8f8f2;
+  transition: color 0.3s;
 }
-.lgScrMenu li a {
-  color: darkslateblue;
-  font-size: 1.3rem;
-  font-weight: 600;
-  padding: 8px;
+
+.menu-header i:hover {
+  color: #ff79c6;
 }
-.dark-mode .lgScrMenu li a {
-  color: plum;
-}
-.lgScrMenu li a:hover {
-  font-weight: 800;
-  background-color: #fff;
+
+.menu-item {
+  padding: 15px 25px;
   text-decoration: none;
-   border-radius: 20px;
+  color: #f8f8f2;
+  display: block;
+  transition: background-color 0.3s;
+  text-align: left;
+  border-bottom: 1px solid #6272a4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700 !important;
+  font-size: 1.3rem;
 }
-.dark-mode .lgScrMenu li a:hover  {
-  background-color: #121212;
+
+.menu-item:hover {
+  background-color: #6272a4;
+  color: white;
+}
+
+.submenu {
+  display: none;
+  background-color: #54586a;
+  /* Submenu background */
+  padding-left: 30px;
+}
+
+.submenu.open {
+  display: block;
+}
+
+.submenu a {
+  padding: 10px 25px;
+  display: block;
+  text-decoration: none;
+  color: #f8f8f2;
+  border-bottom: 1px solid #6272a4;
+}
+
+.submenu a:hover {
+  background-color: #6272a4;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+.overlay.open {
+  display: block;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.arrow.rotate {
+  transform: rotate(90deg);
+}
+
+
+/* MENU FOR LARGE AND MEDIUM SCREENS */
+/* MENU FOR LARGE AND MEDIUM SCREENS */
+
+.top-bar {
+  background-color: inherit;
+  padding: 2rem;
+}
+
+.lgMnNm {
+  margin-right: 2rem;
+}
+
+.top-bar ul {
+  background-color: inherit;
+}
+
+.top-bar li {
+  margin-right: 1rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar li a {
+  color: rgb(58, 12, 91);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.dark-mode .top-bar li a {
+  color: #f4dff2;
+}
+
+.dark-mode .top-bar li a:hover {
+  color: #000000;
+}
+
+.top-bar li:hover {
+  transform: scale(1.18);
+  transition: transform 0.3s ease;
+  background-color: #d8c5e3;
+  border-radius: 2rem;
+}
+
+.top-bar li a:hover {
+  text-decoration: none;
+}
+
+
+
+#clearanceTypes {
+  border-radius: 1rem;
+}
+
+#clearanceTypes li {
+  display: flex;
+  white-space: nowrap;
+}
+
+#clearanceTypes li a {
+  font-size: 0.95rem;
+  color: rgb(54, 16, 81);
+}
+
+#clearanceTypes li a:hover {
+  background-color: rgb(234, 206, 234);
+  border-radius: 1rem;
+}
+
+#clearanceTypes li:hover {
+  transition: transform 0.3s ease;
+  transform: scale(0.95);
 }
 
 /* Toggle Button Styling */
 .dark-toggle-btn {
-  position: fixed;
-  top: 5rem;
-  left: 1rem;
-  z-index: 9999; 
   background-color: transparent;
   color: indigo;
-  border: 2px solid green;
-  padding: 0.5rem 0.75rem;
+  padding: 0.3rem 0.5rem;
   border-radius: 999px;
   font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
   transition: background 0.3s ease;
+}
+.dark-mode .dark-toggle-btn {
+  box-shadow: 0 1px 5px rgb(255, 255, 255);
+}
+.dark-toggle-btn:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.15);
+}
+
+.dark-toggle-btn i:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.15) rotate(360deg);
+
+}
+
+#darkToggleI {
+  position: fixed;
+  top: 7.2rem;
+  right: 1rem;
+  z-index: 50;
 }
 
 /* Hero Section */
 .hero-section-with-image {
   background: rgba(0, 0, 0, 0.5) url('https://unibenmte240.github.io/MTE240/asset/logo/bgI.jpeg') no-repeat center center;
+  background: rgba(0, 0, 0, 0.5) url('http://127.0.0.1:5500/asset/logo/bgI.jpeg') no-repeat center center;
   background-size: cover;
   padding: 5rem 1rem;
   color: #fff;
@@ -265,11 +388,29 @@ a:hover {
   font-weight: 600;
   border-radius: 2rem;
 }
+
+.hero-buttons .button:hover,
+.first-step .button:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.15);
+}
+
 .hero-buttons .button:nth-child(1) {
   background: var(--buttonColor);
 }
+
+.hero-buttons .button:nth-child(1):hover {
+  background: linear-gradient(222deg, rgb(210, 192, 232), rgb(165, 155, 188), rgb(105, 20, 255), rgb(50, 8, 255), rgb(155, 139, 180), rgb(61, 8, 255));
+  color: rgb(255, 255, 255)
+}
+
 .hero-buttons .button:nth-child(2) {
   color: #000
+}
+
+.hero-buttons .button:nth-child(2):hover {
+  color: lime;
+  background-color: black;
 }
 
 
@@ -290,7 +431,8 @@ a:hover {
 }
 
 
-.guide-section h2, #faqH2 {
+.guide-section h2,
+#faqH2 {
   margin-bottom: 0.5rem;
   font-weight: 700;
   color: darkslateblue;
@@ -298,6 +440,7 @@ a:hover {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 .imgSteps {
   margin-bottom: 0.5rem;
 }
@@ -306,9 +449,10 @@ a:hover {
 
 /* ACESSING KOFA*/
 
-  .guide-section .step p, .guide-section ul {
-    margin-bottom: 1.5rem;
-  }
+.guide-section .step p,
+.guide-section ul {
+  margin-bottom: 1.5rem;
+}
 
 
 /* floating buttons */
@@ -327,6 +471,7 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
+
 .dark-mode .whatsapp-float {
   color: #000
 }
@@ -334,6 +479,23 @@ a:hover {
 .whatsapp-float:hover {
   background-color: #1ebe57;
 }
+.whatsappFloatFasAnimate {
+  animation: whatsappIcon 0.4s ease;
+}
+@keyframes whatsappIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 
 /* Scroll to Top Button */
 #scrollToTopBtn {
@@ -354,22 +516,43 @@ a:hover {
 }
 
 #scrollToTopBtn:hover {
-  background-color: #0284c7;
+  background-color: #8f02c7;
+}
+
+.scrollToTopBtnAnimate {
+  animation: iconUp 0.5s ease;
+}
+
+@keyframes iconUp {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 
 
 /* FOOTER */
 .footer-section {
-  background-color: #0f172a; /* dark navy */
-  color: #e2e8f0; /* soft gray-blue text */
+  background-color: #0f172a;
+  /* dark navy */
+  color: #e2e8f0;
+  /* soft gray-blue text */
   padding: 3rem 1rem;
   margin-top: 3rem;
   font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 .footer-section h5 {
-  color: #f8fafc; /* white */
+  color: #f8fafc;
+  /* white */
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
@@ -416,12 +599,15 @@ a:hover {
   font-size: 1.3rem;
   color: indigo;
 }
+
 .dark-mode .preInfo p b {
   color: plum;
 }
+
 .ftEnd a {
   color: indigo;
 }
+
 .ftEnd a:hover {
   text-decoration: underline
 }
@@ -432,8 +618,9 @@ a:hover {
   font-weight: 600;
   color: darkslateblue;
 }
+
 .input-group-field {
-  width: 100%;      
+  width: 100%;
   font-size: 1rem;
 }
 
@@ -441,10 +628,12 @@ a:hover {
   main {
     margin-top: 10rem;
   }
+
   .siteNm {
     font-size: 2rem;
   }
+
   .dark-toggle-btn {
-    top: 6rem;
+    top: 8rem;
   }
 }
