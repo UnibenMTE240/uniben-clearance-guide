@@ -156,8 +156,7 @@ if (whatsappBtn) {
 }
 
 
-//fetch("https://unibenmte240.github.io/MTE240/footer.html")
-fetch("http://127.0.0.1:5500/footer.html")
+fetch("https://unibenmte240.github.io/MTE240/footer.html")
 .then(res => res.text())
 .then(data => {
     document.getElementById("footer").innerHTML = data;
