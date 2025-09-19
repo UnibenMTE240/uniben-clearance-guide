@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://https://uniben-clearance-guide.vercel.app/sitemap.xml
