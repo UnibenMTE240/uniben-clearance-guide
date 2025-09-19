@@ -156,7 +156,7 @@ if (whatsappBtn) {
 }
 
 
-fetch("https://unibenmte240.github.io/MTE240/footer.html")
+fetch("https://uniben-clearance-guide.vercel.app/footer.html")
 .then(res => res.text())
 .then(data => {
     document.getElementById("footer").innerHTML = data;
