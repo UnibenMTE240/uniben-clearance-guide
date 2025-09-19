@@ -140,7 +140,7 @@ ul.checklist a {
 .docNm {
   position: sticky;
   z-index: 10; 
-  top: 100px !important;
+  top: 90px !important;
   padding: 0.5rem;
   background-color: var(--backgroundColorII);
 }
