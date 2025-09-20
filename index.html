@@ -1,117 +1,728 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon | UNIBEN Clearance Guide</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="MTE 240">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content=" ">
+  <title>UNIBEN 100L Clearance Guide</title>
+  <meta name="title" content="UNIBEN 100L Clearance Guide">
+  <meta name="description"
+    content="Step-by-step guide to help UNIBEN 100-level students complete online and physical clearance with ease. Includes document requirements, FAQs, and updates.">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://unibenmte240.github.io/uniben-clearance-guide/">
+  <meta property="og:title" content="UNIBEN 100L Clearance Guide">
+  <meta property="og:description"
+    content="Step-by-step guide to help UNIBEN 100-level students complete online and physical clearance with ease.">
+  <meta property="og:image" content="https://unibenmte240.github.io/uniben-clearance-guide/asset/logo/bgI.jpeg">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://unibenmte240.github.io/uniben-clearance-guide/">
+  <meta name="twitter:title" content="UNIBEN 100L Clearance Guide">
+  <meta name="twitter:description"
+    content="Step-by-step guide to help UNIBEN 100-level students complete online and physical clearance with ease.">
+  <meta name="twitter:image" content="https://unibenmte240.github.io/uniben-clearance-guide/asset/logo/bgI.jpeg">
 
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
+  <link rel="icon" type="image/png" sizes="32x32" href="asset/drawable/ic-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="asset/drawable/ic-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="asset/drawable/ic-180.png">
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+  <link rel="stylesheet" href="styles/css/foundation.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
 
-    .countdown {
-      display: flex;
-      gap: 1.5rem;
-      font-size: 1.5rem;
-    }
-
-    .time-box {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .time-box span {
-      display: block;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 15px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-  </style>
 </head>
+
 <body>
-  <h1><i class="fas fa-hourglass-half"></i> We're Launching Soon</h1>
-  <p>Your complete guide to UNIBEN clearance is almost ready. Stay tuned!</p>
 
-  <div class="countdown">
-    <div class="time-box">
-      <span id="days">00</span>
-      Days
-    </div>
-    <div class="time-box">
-      <span id="hours">00</span>
-      Hours
-    </div>
-    <div class="time-box">
-      <span id="minutes">00</span>
-      Minutes
-    </div>
-    <div class="time-box">
-      <span id="seconds">00</span>
-      Seconds
-    </div>
-  </div>
+  <!-- HEADER -->
+  <header>
+    <div>
+      <div class="grid-x show-for-small-only">
+        <div class="cell small-10 medium-9 large-8 align-center-middle" onclick=window.location.href="index.html">
+          <span class="siteNm docLgNm">UNIBEN CLEARANCE GUIDE</span>
+        </div>
+        <div class="cell small-1 medium-2 large-2 align-center-middle">
+          <button class="button hollow menuBut" id="mnBut" title="menu" aria-label="menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
 
-  <footer>© 2025 UNIBEN MTE24</footer>
+      <!-- FOR SMALL SCREENS ONLY -->
+      <div class="menu-container" id="menuContainer">
+        <div class="menu-header">
+          <button aria-label="close menu">
+            <i class="fas fa-times" id="closeMenuButton"></i>
+          </button>
+        </div>
+        <a href="index.html" class="menu-item">Home</a>
+        <a href="how-to-accept-admission.html" class="menu-item" target="_blank" rel="noopener noreferrer">JAMB CAPS
+          Admission Status</a>
+        <a href="document-guidelines.html" class="menu-item" target="_blank" rel="noopener noreferrer">Document
+          Guide</a>
+
+        <div class="menu-item has-submenu" id="clearance">
+          <span>Clearance</span>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+
+        <div class="submenu" id="clearanceSubmenu">
+          <a href="#online-clearance" class="subs">Online Clearance</a>
+          <a href="#physical-clearance" class="subs">Physical Clearance</a>
+        </div>
+        <a href="hostel-booking.html" class="menu-item" target="_blank" rel="noopener noreferrer">Hostel Booking</a>
+        <a href="record-file.html" class="menu-item" target="_blank" rel="noopener noreferrer">Record File</a>
+        <a href="faq.html" class="menu-item" target="_blank" rel="noopener noreferrer">FAQ</a>
+      </div>
+
+      <div class="overlay" id="overlay"></div>
+
+      <!-- FOR MEDIUM AND LARGE SCREENS -->
+      <div class="grid-x grid-margin-x hide-for-small-only align-center-middle text-center">
+
+        <div class="top-bar">
+          <div class="top-bar-left">
+            <nav>
+              <ul class="dropdown menu" data-dropdown-menu>
+                <div class="lgMnNm align-center-middle" onclick=window.location.href="index.html">
+                  <span class="siteNm docLgNm">UNIBEN CLEARANCE GUIDE</span>
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-to-accept-admission.html" target="_blank" rel="noopener noreferrer">JAMB CAPS Admission
+                    Status</a></li>
+                <li><a href="document-guidelines.html" target="_blank" rel="noopener noreferrer">Document Upload
+                    Guidelines</a></li>
+                <li><a href="#">Clearance</a>
+                  <ul class="menu" id="clearanceTypes">
+                    <li><a href="#online-clearance">Online Clearance</a></li>
+                    <li><a href="#physical-clearance">Physical Clearance</a></li>
+                  </ul>
+                </li>
+                <li><a href="hostel-booking.html" target="_blank" rel="noopener noreferrer">Hostel Booking</a></li>
+                <li><a href="record-file.html" target="_blank" rel="noopener noreferrer">Record File</a></li>
+                <li><a href="faq.html" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+                <button id="darkToggle" class="dark-toggle-btn" title="Switch to dark mode"
+                  aria-label="Switch to dark mode">
+                  <i class="fas fa-moon"></i>
+                </button>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <!-- MAIN -->
+  <main class="grid-container cont" id="dynaCont">
+    <div class="grid-x grid-margin-x align-center-middle text-center">
+
+      <button id="darkToggleI" class="dark-toggle-btn show-for-small-only" title="Switch to dark mode"
+        aria-label="Switch to dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <section id="home" class="hero-section-with-image text-center">
+        <div class="row">
+          <div class="large-12 columns">
+            <h1 class="hero-heading" data-aos="zoom-in" data-aos-duration="1600">Start Your UNIBEN Clearance Journey
+            </h1>
+            <p class="hero-lead" data-aos="fade-down" data-aos-duration="1600">
+              A complete step-by-step guide to help you handle your 100-level clearance without confusion.
+            </p>
+            <div class="hero-buttons">
+              <a href="#clearance-overview" class="button large" aria-label="Start guide"><i
+                  class="fas fa-play-circle"></i> Start Guide</a>
+              <a href="https://chat.whatsapp.com/BVq7fm3xgFiHfBxZm8VlLv?mode=ac_t" target="_blank"
+                rel="noopener noreferrer" class="button large success" target="_blank"
+                aria-label="Join WhatsApp Group"><i class="fab fa-whatsapp"></i> Join WhatsApp Group</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- First Step: Accept Admission on JAMB CAPS -->
+      <section id="first-steps" class="callout primary text-center first-step">
+        <div class="row">
+          <div class="large-12 columns">
+            <h3><i class="fas fa-check-circle"></i> Accept Your Admission on JAMB CAPS</h3>
+            <p>
+              Before you begin clearance, you must first accept your <strong>provisional admission</strong> on
+              <a href="https://efacility.jamb.gov.ng/login" target="_blank" rel="noopener noreferrer">JAMB CAPS</a>.
+              Without this step, you won’t
+              be able to access your UNIBEN student portal.
+            </p>
+            <a href="how-to-accept-admission.html" class="button alert" style="border-radius: 2rem"><i
+                class="fas fa-external-link-alt"></i> Learn How to Accept Admission</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="grid-container guide-section">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12 text-center">
+          <h2 id="clearance-overview"><i class="fas fa-route"></i> UNIBEN Clearance Process</h2>
+          <p class="lead">
+            The clearance process at UNIBEN starts with an <strong>online clearance</strong>. Once approved, you're
+            officially recognized as a UNIBEN student. A <strong>physical clearance</strong> may follow later for
+            departmental filing and documentation.
+          </p>
+        </div>
+
+        <div class="cell medium-6 clTyps">
+          <div class="callout" data-aos="zoom-in" data-aos-duration="1600">
+            <h4><i class="fas fa-laptop-code"></i> Online Clearance (Compulsory)</h4>
+            <ul>
+              <li>Upload required documents on the Kofa Portal</li>
+              <li>Clearance officer reviews your documents</li>
+              <li>Once approved, your status becomes <strong>Cleared</strong></li>
+              <li>You’re officially a UNIBEN student</li>
+            </ul>
+            <div class="text-center">
+              <a href="#online-clearance" class="button small">View Online Clearance Steps</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cell medium-6 clTyps">
+          <div class="callout" data-aos="zoom-in" data-aos-duration="1600">
+            <h4><i class="fas fa-building"></i> Physical Clearance (Departmental)</h4>
+            <ul>
+              <li>Occurs later at your faculty/department</li>
+              <li>Documents may be submitted in printed format</li>
+              <li>Used for internal record-keeping</li>
+              <li>Not required to validate your admission</li>
+            </ul>
+            <div class="text-center">
+              <a href="#physical-clearance" class="button small">View Physical Clearance Guide</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cell medium-12 text-center">
+          <p class="small text-gray">
+            🎓 <strong>Note:</strong> Only the online clearance must be completed for you to be fully admitted. Make
+            sure your documents are correct and properly uploaded.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-container guide-section" id="online-clearance">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12 text-center">
+          <h2><i class="fas fa-laptop-code"></i> Start Your UNIBEN Online Clearance</h2>
+          <p class="lead">
+            From this point forward, you'll follow all the necessary steps to complete your UNIBEN <strong>online
+              clearance</strong> — including paying your acceptance fee, uploading documents, and awaiting approval.
+          </p>
+          <p class="small text-gray">
+            💡 Once your status shows <strong>Cleared</strong> on Kofa, you’re officially a UNIBEN student.
+          </p>
+          <div class="text-center">
+            <a href="#acceptance" class="button primary">Start Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-container guide-section">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12">
+          <h2 class="text-center">
+            <i class="fas fa-user-graduate"></i> After Accepting Admission: Get Your Kofa Login
+          </h2>
+          <p class="lead text-center">
+            Now that you've accepted admission on JAMB CAPS, here's how to access your UNIBEN student portal.
+          </p>
+
+          <div class="callout success">
+            <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> You don’t need to sign up manually. UNIBEN will
+              automatically create your student portal login after a short while.</p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-clock"></i> Step 1: Wait for UNIBEN to Create Your Login</h4>
+            <p>Usually within 24–48 hours after accepting your admission, UNIBEN will automatically generate your Kofa
+              portal account credentials.</p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-user-tag"></i> Step 2: Get Your Username and Password</h4>
+            <p>Visit your <strong>Aspirant Profile</strong> (same one used during post-UTME application). There, you'll
+              find your:</p>
+            <ul>
+              <li><strong>Username:</strong> Generated by UNIBEN (usually starts with "B")</li>
+              <li><strong>Password:</strong> Generated by UNIBEN (displayed on profile)</li>
+            </ul>
+            <div class="screenshot-preview imgSteps" data-aos="fade-up" data-aos-duration="1200">
+              <img src="asset/DCIM/sampleV.jpg" alt="Screenshot showing how to locate your kofa login details"
+                class="responsive-img preview" loading="lazy">
+            </div>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-sign-in-alt"></i> Step 3: Login to Kofa Portal</h4>
+            <p>Now go to <a href="https://waeup.uniben.edu/login" target="_blank"
+                rel="noopener noreferrer">https://waeup.uniben.edu</a>, click on
+              <strong>Login</strong>, and enter your credentials to access your student dashboard.
+            </p>
+          </div>
+
+          <div class="callout primary text-center">
+            <p><i class="fas fa-arrow-circle-right"></i> Once logged in, you can proceed to pay your acceptance fee and
+              begin your clearance.</p>
+            <a href="#acceptance" class="button custom">Next: Pay Acceptance Fee</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="grid-container guide-section" id="acceptance">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12">
+          <h2 class="text-center">
+            <i class="fas fa-credit-card"></i> Pay Your UNIBEN Acceptance Fee
+          </h2>
+          <p class="lead text-center">
+            Your admission is not complete until you’ve paid the official acceptance fee through the Kofa portal.
+          </p>
+
+          <div class="callout warning">
+            <p><i class="fas fa-exclamation-circle"></i> <strong>Note:</strong> You may need to wait for the
+              <strong>payment portal to be activated</strong> by UNIBEN before proceeding. If you don’t see the payment
+              option yet, check back later.
+            </p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-sign-in-alt"></i> Step 1: Log into the Kofa Portal</h4>
+            <p>Go to <a href="https://waeup.uniben.edu/login" target="_blank"
+                rel="noopener noreferrer">https://waeup.uniben.edu</a> and log in
+              using your Student Id and the password from your aspirant profile.</p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-folder-open"></i> Step 2: Open “Payments”</h4>
+            <p>From the menu, click on <strong>"My Data"</strong> and select<strong>“Payments”</strong>.</p>
+          </div>
+
+          <div class="screenshot-preview imgSteps" data-aos="fade-up" data-aos-duration="1200">
+            <img src="asset/DCIM/sampleVI.jpg" alt="Screenshot showing how to go to the payments page"
+              class="responsive-img preview" loading="lazy">
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-receipt"></i> Step 3: Generate Your Payment Ticket</h4>
+            <p>Click on <strong>"Add current session Payment"</strong> then select <strong>“Acceptance Fee.”</strong>
+              This will generate a <strong>Remita RRR</strong> for your transaction.</p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-university"></i> Step 4: Make Payment</h4>
+            <p>You can pay:</p>
+            <ul>
+              <li>💳 Online using a debit card via Remita</li>
+              <li>🏦 At any bank with the printed RRR</li>
+            </ul>
+          </div>
+
+          <div class="step" id="activation-code">
+            <h4> Activation Code</h4>
+            <p>Once payment is successful, copy your <strong>Activation Code</strong>. The Activation Code is required
+              when you want to start uploading your clearance documents.</p>
+          </div>
+
+          <div class="callout primary text-center">
+            <p><i class="fas fa-arrow-circle-right"></i> Once you’ve paid the acceptance fee, you can move on to
+              uploading your clearance files.</p>
+            <a href="#upload-documents" class="button custom">Next: Upload Documents</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="grid-container guide-section" id="upload-documents">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12">
+          <h2 class="text-center">
+            <i class="fas fa-upload"></i> Upload Your Clearance Documents
+          </h2>
+          <p class="lead text-center">
+            After paying your acceptance fee, the next step is to upload all required documents for online clearance.
+          </p>
+
+          <div class="step">
+            <h4><i class="fas fa-sign-in-alt"></i> Step 1: Log into Kofa Portal Again</h4>
+            <p>Visit <a href="https://waeup.uniben.edu/login" target="_blank"
+                rel="noopener noreferrer">https://waeup.uniben.edu</a> and log in
+              with your credentials.</p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-folder-open"></i> Step 2: Go to the “Upload Documents” Section</h4>
+            <p>On the Menu, click on <strong>"My Data"</strong> and locate <strong>“Clearance Data”</strong>.</p>
+            <p>Enter your <a href="#activation-code">CLR Activation Code</a> to start uploading your <a
+                href="document-guidelines.html">clearance documents</a>.</p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-file-upload"></i> Step 3: Upload Required Documents</h4>
+            <p>Make sure your scanned files are clear, colored, and not blurry. Recommended file size: <strong>100KB –
+                200KB</strong></p>
+            <ul class="docLi">
+              <li>JAMB Admission Letter</li>
+              <li>JAMB Result Slip</li>
+              <li>Acceptance Letter</li>
+              <li>Guarantor’s Letter</li>
+              <li>Birth Certificate</li>
+              <li>Local Government of Origin Certificate</li>
+              <li>WAEC/NECO Certificate</li>
+              <li>WAEC/NECO Scratch Card</li>
+              <li>Recent Passport Photograph (Red background)</li>
+              <li>Affidavit of Non-Membership of Secret Cult</li>
+              <li>Affidavit of Good Conduct</li>
+            </ul>
+          </div>
+
+          <div class="text-center">
+            <a href="document-guidelines.html" target="_blank" class="button custom">Document
+              Guidelines</a>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-check-circle"></i> Step 4: Review & Submit</h4>
+            <p>Ensure all files are correctly placed. Once your documents have been correctly uploaded, click
+              <strong>“Request Clearance”</strong>.
+            </p>
+          </div>
+
+          <div class="callout primary text-center">
+            <p><i class="fas fa-info-circle"></i> Your documents will be reviewed. If approved, your portal will show:
+            </p>
+            <strong>Cleared</strong><br />
+            If rejected, your portal will return to <strong>Clearance started, </strong>a reason will be shown and you
+            can request clearance again when the issue is fixed.
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-container guide-section" id="clearance-review">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12">
+          <h2 class="text-center">
+            <i class="fas fa-user-clock"></i> Await Clearance Review by Officer
+          </h2>
+          <p class="lead text-center">
+            After uploading your documents, your clearance request is sent to the assigned clearance officer for review.
+          </p>
+
+          <div class="step">
+            <h4><i class="fas fa-hourglass-half"></i> Step 1: Status Changes to <strong>"Clearance Requested"</strong>
+            </h4>
+            <p>Once you submit your documents and request clearance, the Kofa portal will update to show
+              <strong>Clearance Requested</strong>. This means your documents are now being reviewed by the clearance
+              officer.
+            </p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-user-check"></i> Step 2: Officer Reviews Your Submission</h4>
+            <p>Your clearance officer will manually go through each document to confirm that they are correct, properly
+              scanned, and match your details.</p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-check-circle text-success"></i> Step 3: If Approved – Status Changes to
+              <strong>"Cleared"</strong>
+            </h4>
+            <p>If all your documents are accepted, your Kofa status will change to <strong>Cleared</strong>. You can now
+              proceed to school fee payment.</p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-times-circle text-danger"></i> Step 4: If Rejected – Status Changes to
+              <strong>"Clearance Started"</strong>
+            </h4>
+            <p>If there's an issue (e.g. wrong file, blurry image, wrong document), your clearance will be rejected. The
+              system will show the reason, and your status will return to <strong>Clearance Started</strong>.</p>
+          </div>
+
+          <div class="callout warning text-center">
+            <p><i class="fas fa-exclamation-triangle"></i> Always check your portal daily during this period. Fix and
+              re-upload any rejected document promptly to avoid delay.</p>
+          </div>
+
+          <div class="text-center">
+            <a href="#physical-clearance" class="button custom">Next: Physical Clearance</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-container guide-section" id="physical-clearance">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12 text-center">
+          <h2><i class="fas fa-building"></i> Physical Clearance</h2>
+          <p class="lead">
+            Once you're cleared online, you'll be required to submit your documents physically at your faculty or
+            department. This is for official records and filing only — it doesn’t affect your admission.
+          </p>
+          <p class="small text-gray">
+            This step usually takes place after resumption. Check your faculty's announcements to know when to
+            submit.
+          </p>
+          <div class="text-center">
+            <a href="#physical-clearance-guide" class="button custom">View Instructions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-container guide-section" id="physical-clearance-guide">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12">
+          <h2 class="text-center"><i class="fas fa-folder-open"></i> Physical Clearance Guide</h2>
+          <p class="lead text-center">
+            Physical clearance at UNIBEN is handled by individual faculties. The process and requirements may vary
+            depending on your department.
+          </p>
+
+          <div class="callout warning text-center">
+            <p><i class="fas fa-exclamation-circle"></i> <strong>Important:</strong> Physical clearance is not the same
+              for all students. Always follow your faculty or departmental instructions.</p>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-bullhorn"></i> 1. Wait for Department Instructions</h4>
+            <p>Faculties will announce when physical clearance begins. Stay updated through:</p>
+            <ul>
+              <li>Faculty or department WhatsApp groups</li>
+              <li>Notice boards or faculty bulletins</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-print"></i> 2. Print Your Clearance Documents</h4>
+            <p>Print all your uploaded clearance documents, including:</p>
+            <ul class="docLi no-bullet">
+              <li><i class="fas fa-check-circle"></i> JAMB Admission Letter (Institution Copy)</li>
+              <li><i class="fas fa-check-circle"></i> UNIBEN Acceptance Letter</li>
+              <li><i class="fas fa-check-circle"></i> Birth Certificate</li>
+              <li><i class="fas fa-check-circle"></i> Local Government Certificate of Origin</li>
+              <li><i class="fas fa-check-circle"></i> Guarantor’s Letter</li>
+              <li><i class="fas fa-check-circle"></i> Acceptance Letter</li>
+              <li><i class="fas fa-check-circle"></i> Passport Photographs (Red Background)</li>
+              <li><i class="fas fa-check-circle"></i> WAEC/NECO Certificate</li>
+              <li><i class="fas fa-check-circle"></i> WAEC/NECO Scratch Card Info</li>
+              <li><i class="fas fa-check-circle"></i> Affidavit of Non-Membership of Secret Cult</li>
+              <li><i class="fas fa-check-circle"></i> Affidavit of Good Conduct</li>
+
+            </ul>
+          </div>
+
+          <div class="step">
+            <h4><i class="fas fa-folder"></i> 3. Get and Fill Your Record Files</h4>
+            <p>After paying for your record files and collecting them from Exams & Records, you’ll be issued
+              <strong>three (3)</strong> copies.
+            </p>
+            <p>Each file must be carefully filled by the student and include all required printed documents arranged in
+              the correct order.</p>
+            <p>🔗 <a href="record-file.html">Learn how to get your record file</a></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-container guide-section" id="course-registration">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12">
+          <h2 class="text-center"><i class="fas fa-book-open"></i> Course Registration in UNIBEN</h2>
+
+          <p class="lead text-center">
+            After completing your clearance, the next step is to register your courses. UNIBEN uses <strong>two
+              types</strong> of course registration:
+            <strong>physical course registration</strong> and <strong>online course registration</strong>. You must
+            complete both.
+          </p>
+
+          <div class="callout warning text-center">
+            <p><i class="fas fa-exclamation-circle"></i> <strong>Important:</strong> Do not register random courses.
+              Always confirm your course list from your course rep, department or course adviser.</p>
+          </div>
+
+          <div class="callout success">
+            <h4><i class="fas fa-building"></i> Physical Course Registration (Comes First)</h4>
+            <p>
+              This is the first step. It involves physically going to the department of each course you are offering to
+              register for that course. Here’s how it works:
+            </p>
+            <ul>
+              <li>Make a list of all the courses you are expected to take for the semester.</li>
+              <li>Visit each department offering the courses (including electives).</li>
+              <li><strong>A certain amount </strong> is usually paid to each department for registration.</li>
+              <li>Keep any receipt they issue.</li>
+            </ul>
+          </div>
+
+          <div class="callout primary">
+            <h4><i class="fas fa-user-edit"></i> Online Course Registration (Kofa Portal)</h4>
+            <p>
+              After completing the physical registration, head to the
+              <a href="https://waeup.uniben.edu/login" target="_blank" rel="noopener noreferrer">UNIBEN Kofa portal</a>
+              to register those same
+              courses online:
+            </p>
+            <ul>
+              <li>Login to your Kofa account.</li>
+              <li>Go to <strong>“My Data” → “Study Course.”</strong></li>
+              <li>Select the current session and semester.</li>
+              <li>Register the exact courses approved by your department.</li>
+              <li>Submit and print your course registration slip.</li>
+            </ul>
+            <p><strong>Note:</strong> You need to pay your school fees before online course registration is enabled.</p>
+            <div class="callout warning text-center">
+              <p><i class="fas fa-exclamation-circle"></i> <strong>Important:</strong> Make sure to confirm your course
+                list before proceeding with online course registration</p>
+            </div>
+          </div>
+
+          <div class="callout warning text-center">
+            <p><i class="fas fa-exclamation-circle"></i> Both physical and online registration must be completed to
+              fully register your courses. Skipping one can cause problems during exams or result processing.</p>
+          </div>
+        </div>
+
+        <!-- THIS PART SHOULD BE CORRECTED -->
+        <!-- THIS PART SHOULD BE CORRECTED -->
+        <!-- THIS PART SHOULD BE CORRECTED -->
+        <div class="callout success text-center">
+          <p><i class="fas fa-check-circle"></i> Your courses are now officially registered. If you made a mistake,
+            visit your department early to correct it before deadlines.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="grid-container guide-section" id="hostel-booking-intro">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12 text-center">
+          <h2><i class="fas fa-bed"></i> Hostel Booking in UNIBEN</h2>
+          <p class="lead">
+            After completing your <strong>online clearance</strong>, you can apply for accommodation through the Kofa
+            portal. Booking is done
+            online and is first-come, first-served — so act fast when it's announced!
+          </p>
+          <a href="hostel-booking.html" class="button custom">View Hostel Booking Guide</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-container faq-preview-section" id="faqH2">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="cell large-10 medium-12 text-center">
+          <h2><i class="fas fa-question-circle"></i> Quick FAQs</h2>
+          <p class="lead">Answers to common questions about UNIBEN clearance.</p>
+        </div>
+
+        <div class="cell large-10">
+          <ul class="accordion" data-accordion data-allow-all-closed="true">
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title"><i class="fas fa-user"></i> I accepted admission but can’t log into
+                Kofa?</a>
+              <div class="accordion-content" data-tab-content>
+                <p>UNIBEN will automatically generate your login within 24–72 hours. Check your Aspirant Profile for
+                  credentials.</p>
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title"><i class="fas fa-file-upload"></i> “Upload Documents” is missing?</a>
+              <div class="accordion-content" data-tab-content>
+                <p>This section only appears after you’ve paid the acceptance fee on the portal.</p>
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title"><i class="fas fa-times-circle"></i> What if I upload the wrong
+                document?</a>
+              <div class="accordion-content" data-tab-content>
+                <p>Your portal status will return to “Clearance Started.” You can then re-upload the correct file.</p>
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title"><i class="fas fa-folder-open"></i> Is physical clearance
+                compulsory?</a>
+              <div class="accordion-content" data-tab-content>
+                <p>Yes, but only after online clearance. Each department handles it differently.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cell text-center">
+          <a href="faq.html" class="button custom">View Full FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <a href="https://chat.whatsapp.com/BVq7fm3xgFiHfBxZm8VlLv?mode=ac_t" class="whatsapp-float" target="_blank"
+      rel="noopener noreferrer" aria-label="Join WhatsApp Group">
+      <i class="fab fa-whatsapp" id="whatsapp-float-fas"></i>
+    </a>
+
+    <button id="scrollToTopBtn" title="Scroll to top" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up" id="closeFas"></i>
+    </button>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-section" id="footer"></footer>
+
 
   <script>
-    // Set launch date (example: Oct 15, 2025, 10:00 AM)
-    const launchDate = new Date("Sept 20, 2025 20:00:00").getTime();
 
-    const timer = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        document.querySelector(".countdown").innerHTML = "<h2>🎉 We're Live!</h2>";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
-    }, 1000);
   </script>
+  </footer>
+  <script>
+  </script>
+
+  <script src="scripts/js/vendor/jquery.js"></script>
+  <script src="scripts/js/vendor/what-input.js"></script>
+  <script src="scripts/js/vendor/foundation.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/ring.js"></script>
+  <script src="scripts/gScript.js"></script>
+  <script src="scripts/theme.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    $(document).foundation();
+    AOS.init();
+
+    /* document.querySelectorAll(".lgScrMenu li").forEach(button => {
+                 button.addEventListener("click", () => {
+                     button.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }); // Scroll the clicked button into view smoothly                                                
+             });
+         })*/
+
+  </script>
+
 </body>
+
 </html>
