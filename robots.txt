@@ -3,4 +3,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://uniben-clearance-guide.vercel.app/sitemap.xml
-
