@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance | UNIBEN Clearance Guide</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #BA55D3;
+            --primary-light: rgba(186, 85, 211, 0.08);
+            --text: #222;
+            --white: #fff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: var(--primary-light);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 0.8s ease;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .time-box {
+            background: var(--primary-light);
+            padding: 15px 20px;
+            border-radius: 12px;
+            min-width: 80px;
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1><i class="fas fa-tools"></i> Under Maintenance</h1>
+        <p>We’re upgrading the UNIBEN Clearance Guide to serve you better. Please check back soon.</p>
+    </div>
+
+    <footer>© 2025 UNIBEN Clearance Guide</footer>
+
+</body>
+
+</html>
